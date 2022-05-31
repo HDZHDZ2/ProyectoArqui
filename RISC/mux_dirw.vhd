@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity mux_dirw is
 	Port (  seldirw : in STD_LOGIC_VECTOR(1 downto 0);
 			  seldir : in STD_LOGIC_VECTOR(1 downto 0);
+			  seldet : in STD_LOGIC_VECTOR(1 downto 0);
 			  sel  : out STD_LOGIC_VECTOR(1 downto 0));
 end mux_dirw;
 

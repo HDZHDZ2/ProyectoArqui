@@ -5,6 +5,7 @@ entity registro_inst is
 	Port (  RELOJ : in STD_LOGIC;
 			  RESET : in STD_LOGIC;
 			  ENTRADA  : in STD_LOGIC_VECTOR(31 downto 0);
+			  IFIDWrite : in STD_LOGIC;
 			  SALIDA15 : out STD_LOGIC_VECTOR(15 downto 0);
 			  SALIDA7 : out STD_LOGIC_VECTOR(7 downto 0);
 			  SALIDA31 : out STD_LOGIC_VECTOR(15 downto 0));
@@ -20,7 +21,9 @@ begin
 		if RESET = '0' then 
 			valor_interno <= zero;
 		elsif rising_edge (RELOJ) then
-			valor_interno <= ENTRADA;
+			if IFIDWrite = '1' then
+				valor_interno <= ENTRADA;
+			end if;
 		end if;
 	end process;
 	

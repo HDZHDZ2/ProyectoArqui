@@ -5,6 +5,7 @@ entity registro_pc2 is
 	Port (  RELOJ : in STD_LOGIC;
 			  RESET : in STD_LOGIC;
 			  ENTRADA  : in STD_LOGIC_VECTOR(15 downto 0);
+			  SEL : in STD_LOGIC;
 			  SALIDA : out STD_LOGIC_VECTOR(15 downto 0));
 end registro_pc2;
 
@@ -18,7 +19,9 @@ begin
 		if RESET = '0' then 
 			valor_interno <= zero;
 		elsif falling_edge (RELOJ) then
-			valor_interno <= ENTRADA;
+			if SEL= '1' then
+				valor_interno <= ENTRADA;
+			end if;
 		end if;
 	end process;
 	
