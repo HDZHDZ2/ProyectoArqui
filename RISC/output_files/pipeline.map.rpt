@@ -1,0 +1,1007 @@
+Analysis & Synthesis report for pipeline
+Mon May 30 19:19:02 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Source assignments for memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated
+ 15. Parameter Settings for User Entity Instance: BUSMUX:inst40
+ 16. Parameter Settings for User Entity Instance: BUSMUX:inst9999
+ 17. Parameter Settings for User Entity Instance: BUSMUX:inst38
+ 18. Parameter Settings for User Entity Instance: BUSMUX:inst39
+ 19. Parameter Settings for User Entity Instance: BUSMUX:inst42
+ 20. Parameter Settings for Inferred Entity Instance: memoria_inst:inst1|altsyncram:mem_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 30 19:19:02 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; pipeline                                    ;
+; Top-level Entity Name              ; pipeline                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 85                                          ;
+;     Total combinational functions  ; 65                                          ;
+;     Dedicated logic registers      ; 61                                          ;
+; Total registers                    ; 61                                          ;
+; Total pins                         ; 104                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,632                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; pipeline           ; pipeline           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; incrementador.vhdl               ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/incrementador.vhdl     ;         ;
+; registro_pc.vhd                  ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_pc.vhd        ;         ;
+; memoria_inst.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_inst.vhd       ;         ;
+; pipeline.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/pipeline.bdf           ;         ;
+; registro_inst.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_inst.vhd      ;         ;
+; ext_signo.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/ext_signo.vhd          ;         ;
+; mux_dir.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_dir.vhd            ;         ;
+; sumador.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/sumador.vhd            ;         ;
+; memoria_datos.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_datos.vhd      ;         ;
+; mux_src.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_src.vhd            ;         ;
+; registros.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registros.bdf          ;         ;
+; mux_regs.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_regs.vhd           ;         ;
+; deco_regw.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/deco_regw.vhd          ;         ;
+; u_control.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/u_control.vhd          ;         ;
+; reg_acoplo_3.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/reg_acoplo_3.vhd       ;         ;
+; upa.vhd                          ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd                ;         ;
+; mux_result.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_result.vhd         ;         ;
+; ccr.vhd                          ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/ccr.vhd                ;         ;
+; branch.vhd                       ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/branch.vhd             ;         ;
+; registro_1.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_1.vhd         ;         ;
+; reg_acoplo_4.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/reg_acoplo_4.vhd       ;         ;
+; mux_dirw.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_dirw.vhd           ;         ;
+; registro_esp.vhdl                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_esp.vhdl      ;         ;
+; registro_pc2.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_pc2.vhd       ;         ;
+; mem_prog.mif                     ; yes             ; User Memory Initialization File    ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mem_prog.mif           ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/busmux.tdf                                          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                                         ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf                                         ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/aglobal181.inc                                      ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/muxlut.inc                                          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/bypassff.inc                                        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altshift.inc                                        ;         ;
+; db/mux_7rc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/db/mux_7rc.tdf         ;         ;
+; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/db/mux_tsc.tdf         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                                      ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                                      ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                                       ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                                          ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altram.inc                                          ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                                        ;         ;
+; db/altsyncram_pi41.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/db/altsyncram_pi41.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 85          ;
+;                                             ;             ;
+; Total combinational functions               ; 65          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 10          ;
+;     -- 3 input functions                    ; 33          ;
+;     -- <=2 input functions                  ; 22          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 61          ;
+;     -- arithmetic mode                      ; 4           ;
+;                                             ;             ;
+; Total registers                             ; 61          ;
+;     -- Dedicated logic registers            ; 61          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 104         ;
+; Total memory bits                           ; 1632        ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; RELOJ~input ;
+; Maximum fan-out                             ; 93          ;
+; Total fan-out                               ; 725         ;
+; Average fan-out                             ; 1.98        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
+; |pipeline                                 ; 65 (0)              ; 61 (0)                    ; 1632        ; 0            ; 0       ; 0         ; 104  ; 0            ; |pipeline                                                                        ; pipeline        ; work         ;
+;    |ccr:inst|                             ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ccr:inst                                                               ; ccr             ; work         ;
+;    |memoria_inst:inst1|                   ; 0 (0)               ; 1 (1)                     ; 1632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1                                                     ; memoria_inst    ; work         ;
+;       |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
+;          |altsyncram_pi41:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated ; altsyncram_pi41 ; work         ;
+;    |mux_result:inst20|                    ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_result:inst20                                                      ; mux_result      ; work         ;
+;    |mux_src:inst202|                      ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_src:inst202                                                        ; mux_src         ; work         ;
+;    |reg_acoplo_3:inst16|                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|reg_acoplo_3:inst16                                                    ; reg_acoplo_3    ; work         ;
+;    |reg_acoplo_4:inst107|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|reg_acoplo_4:inst107                                                   ; reg_acoplo_4    ; work         ;
+;    |registro_1:inst101|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst101                                                     ; registro_1      ; work         ;
+;    |registro_1:inst102|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst102                                                     ; registro_1      ; work         ;
+;    |registro_pc2:inst34|                  ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc2:inst34                                                    ; registro_pc2    ; work         ;
+;    |registro_pc:inst14|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc:inst14                                                     ; registro_pc     ; work         ;
+;    |registro_pc:inst24|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc:inst24                                                     ; registro_pc     ; work         ;
+;    |registros:inst700666|                 ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registros:inst700666                                                   ; registros       ; work         ;
+;       |registro_esp:ACCB|                 ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registros:inst700666|registro_esp:ACCB                                 ; registro_esp    ; work         ;
+;    |u_control:inst206|                    ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|u_control:inst206                                                      ; u_control       ; work         ;
+;    |upa:inst33|                           ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|upa:inst33                                                             ; upa             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                  ;
++-----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+; Name                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF          ;
++-----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+; memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 51           ; 32           ; --           ; --           ; 1632 ; mem_prog.mif ;
++-----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal          ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------+------------------------+
+; upa:inst33|opres[15]                                ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[1]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[2]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[3]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[4]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[5]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[6]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[7]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[8]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[9]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[10]                                ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[11]                                ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[12]                                ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[13]                                ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[14]                                ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; upa:inst33|opres[0]                                 ; reg_acoplo_3:inst16|selop[2] ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                              ;                        ;
++-----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++-------------------------------------------------------------+--------------------------------------------------+
+; Register name                                               ; Reason for Removal                               ;
++-------------------------------------------------------------+--------------------------------------------------+
+; registro_pc:inst6|valor_interno[0..15]                      ; Lost fanout                                      ;
+; reg_acoplo_3:inst16|selop[0,1,3]                            ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|selresult[1]                            ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|cadj                                    ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|selfalgs[1..3]                          ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|selbranch[0..2]                         ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|vf                                      ; Stuck at VCC due to stuck port data_in           ;
+; reg_acoplo_3:inst16|selregw[0,1]                            ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|memw                                    ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|seldirw[0,1]                            ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_4:inst107|selregw[0,1]                           ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_4:inst107|memw                                   ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_4:inst107|seldirw[0,1]                           ; Stuck at GND due to stuck port data_in           ;
+; registros:inst700666|registro_esp:ACCA|valor_interno[0..15] ; Stuck at GND due to stuck port clock_enable      ;
+; registro_1:inst100|valor_interno                            ; Stuck at GND due to stuck port data_in           ;
+; registros:inst700666|registro_esp:SP|valor_interno[0..15]   ; Stuck at GND due to stuck port clock_enable      ;
+; registros:inst700666|registro_esp:IY|valor_interno[0..15]   ; Stuck at GND due to stuck port clock_enable      ;
+; registros:inst700666|registro_esp:IX|valor_interno[0..15]   ; Stuck at GND due to stuck port clock_enable      ;
+; registros:inst700666|registro_esp:AUX|valor_interno[0..15]  ; Stuck at GND due to stuck port clock_enable      ;
+; memoria_datos:inst41|datos[0..15]                           ; Stuck at GND due to stuck port data_in           ;
+; registro_pc:inst23|valor_interno[15]                        ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[15]                        ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[14]                        ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[14]                        ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[13]                        ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[13]                        ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[12]                        ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[12]                        ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[11]                        ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[11]                        ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[10]                        ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[10]                        ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[9]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[9]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[8]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[8]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[7]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[7]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[6]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[6]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[5]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[5]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[4]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[4]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[3]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[3]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[2]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[2]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[1]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[1]                         ; Lost fanout                                      ;
+; registro_pc:inst23|valor_interno[0]                         ; Lost fanout                                      ;
+; registro_pc:inst15|valor_interno[0]                         ; Lost fanout                                      ;
+; ccr:inst|vi                                                 ; Stuck at GND due to stuck port data_in           ;
+; registro_1:inst103|valor_interno                            ; Stuck at GND due to stuck port data_in           ;
+; reg_acoplo_3:inst16|selregw[2]                              ; Merged with reg_acoplo_3:inst16|selresult[0]     ;
+; reg_acoplo_3:inst16|selfalgs[0]                             ; Merged with reg_acoplo_3:inst16|selresult[0]     ;
+; reg_acoplo_3:inst16|selc                                    ; Merged with reg_acoplo_3:inst16|selresult[0]     ;
+; ccr:inst|hi                                                 ; Merged with ccr:inst|ii                          ;
+; ccr:inst|ci                                                 ; Merged with ccr:inst|ii                          ;
+; reg_acoplo_3:inst16|selresult[0]                            ; Merged with reg_acoplo_3:inst16|selop[2]         ;
+; registro_pc:inst700|valor_interno[1..15]                    ; Merged with registro_pc:inst700|valor_interno[0] ;
+; ccr:inst|ii                                                 ; Stuck at GND due to stuck port data_in           ;
+; registro_1:inst106|valor_interno                            ; Stuck at GND due to stuck port data_in           ;
+; registro_1:inst105|valor_interno                            ; Stuck at GND due to stuck port data_in           ;
+; registro_1:inst104|valor_interno                            ; Stuck at GND due to stuck port data_in           ;
+; registro_pc:inst700|valor_interno[0]                        ; Stuck at GND due to stuck port data_in           ;
+; registro_pc2:inst34|valor_interno[6..15]                    ; Lost fanout                                      ;
+; Total Number of Removed Registers = 205                     ;                                                  ;
++-------------------------------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++----------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++----------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; reg_acoplo_3:inst16|selregw[1]   ; Stuck at GND              ; reg_acoplo_4:inst107|selregw[1],                                            ;
+;                                  ; due to stuck port data_in ; registros:inst700666|registro_esp:ACCA|valor_interno[0],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[1],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[2],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[3],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[4],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[5],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[6],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[7],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[8],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[9],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[10],                   ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[11],                   ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[12],                   ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[13],                   ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[14],                   ;
+;                                  ;                           ; registros:inst700666|registro_esp:ACCA|valor_interno[15],                   ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[0],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[1],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[2],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[3],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[4],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[5],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[6],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[7],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[8],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[9],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[10],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[11],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[12],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[13],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[14],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[15],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[0],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[1],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[2],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[3],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[4],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[5],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[6],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[7],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[8],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[9],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[10],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[11],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[12],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[13],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[14],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[15],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[0],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[1],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[2],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[3],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[4],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[5],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[6],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[7],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[8],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[9],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[10],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[11],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[12],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[13],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[14],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[15],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[0],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[1],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[2],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[3],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[4],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[5],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[6],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[7],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[8],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[9],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[10],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[11],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[12],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[13],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[14],                    ;
+;                                  ;                           ; registros:inst700666|registro_esp:AUX|valor_interno[15]                     ;
+; reg_acoplo_3:inst16|memw         ; Stuck at GND              ; reg_acoplo_4:inst107|memw, memoria_datos:inst41|datos[1],                   ;
+;                                  ; due to stuck port data_in ; memoria_datos:inst41|datos[0], memoria_datos:inst41|datos[2],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[3], memoria_datos:inst41|datos[4],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[5], memoria_datos:inst41|datos[6],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[7], memoria_datos:inst41|datos[8],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[9], memoria_datos:inst41|datos[10],              ;
+;                                  ;                           ; memoria_datos:inst41|datos[11], memoria_datos:inst41|datos[12],             ;
+;                                  ;                           ; memoria_datos:inst41|datos[13], memoria_datos:inst41|datos[14],             ;
+;                                  ;                           ; memoria_datos:inst41|datos[15]                                              ;
+; reg_acoplo_3:inst16|seldirw[1]   ; Stuck at GND              ; reg_acoplo_4:inst107|seldirw[1], registro_pc:inst23|valor_interno[15],      ;
+;                                  ; due to stuck port data_in ; registro_pc:inst23|valor_interno[14], registro_pc:inst23|valor_interno[13], ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[12], registro_pc:inst23|valor_interno[11], ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[10], registro_pc:inst23|valor_interno[9],  ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[8], registro_pc:inst23|valor_interno[7],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[6], registro_pc:inst23|valor_interno[5],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[4], registro_pc:inst23|valor_interno[3],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[2], registro_pc:inst23|valor_interno[1],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[0]                                         ;
+; reg_acoplo_3:inst16|selresult[1] ; Stuck at GND              ; registro_pc:inst15|valor_interno[15], registro_pc:inst15|valor_interno[14], ;
+;                                  ; due to stuck port data_in ; registro_pc:inst15|valor_interno[13], registro_pc:inst15|valor_interno[12], ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[11], registro_pc:inst15|valor_interno[10], ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[9], registro_pc:inst15|valor_interno[8],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[7], registro_pc:inst15|valor_interno[6],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[5], registro_pc:inst15|valor_interno[4],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[3], registro_pc:inst15|valor_interno[2],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[1], registro_pc:inst15|valor_interno[0]    ;
+; reg_acoplo_3:inst16|selfalgs[3]  ; Stuck at GND              ; ccr:inst|vi, registro_1:inst103|valor_interno, ccr:inst|ii,                 ;
+;                                  ; due to stuck port data_in ; registro_1:inst106|valor_interno, registro_1:inst105|valor_interno,         ;
+;                                  ;                           ; registro_1:inst104|valor_interno                                            ;
+; reg_acoplo_3:inst16|selbranch[2] ; Stuck at GND              ; registro_1:inst100|valor_interno                                            ;
+;                                  ; due to stuck port data_in ;                                                                             ;
+; reg_acoplo_3:inst16|selregw[0]   ; Stuck at GND              ; reg_acoplo_4:inst107|selregw[0]                                             ;
+;                                  ; due to stuck port data_in ;                                                                             ;
+; reg_acoplo_3:inst16|seldirw[0]   ; Stuck at GND              ; reg_acoplo_4:inst107|seldirw[0]                                             ;
+;                                  ; due to stuck port data_in ;                                                                             ;
++----------------------------------+---------------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 61    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 59    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                   ;
++------------------------------------------+------------------------------+------+
+; Register Name                            ; Megafunction                 ; Type ;
++------------------------------------------+------------------------------+------+
+; registro_inst:inst8|valor_interno[0..31] ; memoria_inst:inst1|mem_rtl_0 ; RAM  ;
++------------------------------------------+------------------------------+------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------+
+; Assignment                      ; Value              ; From ; To                              ;
++---------------------------------+--------------------+------+---------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
++---------------------------------+--------------------+------+---------------------------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst40 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 1     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst9999 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst38 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst39 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst42 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: memoria_inst:inst1|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                      ;
+; WIDTH_A                            ; 32                   ; Untyped                      ;
+; WIDTHAD_A                          ; 6                    ; Untyped                      ;
+; NUMWORDS_A                         ; 51                   ; Untyped                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 1                    ; Untyped                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; mem_prog.mif         ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_pi41      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; memoria_inst:inst1|altsyncram:mem_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                     ;
+;     -- WIDTH_A                            ; 32                                      ;
+;     -- NUMWORDS_A                         ; 51                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 1                                       ;
+;     -- NUMWORDS_B                         ; 1                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
++-------------------------------------------+-----------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 104                         ;
+; cycloneiii_ff         ; 61                          ;
+;     CLR               ; 43                          ;
+;     ENA               ; 2                           ;
+;     ENA CLR           ; 16                          ;
+; cycloneiii_lcell_comb ; 66                          ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 62                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 10                          ;
+; cycloneiii_ram_block  ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 1.62                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 30 19:18:52 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file incrementador.vhdl
+    Info (12022): Found design unit 1: incrementador-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/incrementador.vhdl Line: 11
+    Info (12023): Found entity 1: incrementador File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/incrementador.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux_pc.vhdl
+    Info (12022): Found design unit 1: mux_pc-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_pc.vhdl Line: 11
+    Info (12023): Found entity 1: mux_pc File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_pc.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registro_pc.vhd
+    Info (12022): Found design unit 1: registro_pc-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_pc.vhd Line: 11
+    Info (12023): Found entity 1: registro_pc File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_pc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoria_inst.vhd
+    Info (12022): Found design unit 1: memoria_inst-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_inst.vhd Line: 13
+    Info (12023): Found entity 1: memoria_inst File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_inst.vhd Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline.bdf
+    Info (12023): Found entity 1: pipeline
+Info (12021): Found 2 design units, including 1 entities, in source file registro_inst.vhd
+    Info (12022): Found design unit 1: registro_inst-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_inst.vhd Line: 13
+    Info (12023): Found entity 1: registro_inst File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_inst.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file etapa1.bdf
+    Info (12023): Found entity 1: etapa1
+Info (12021): Found 2 design units, including 1 entities, in source file ext_signo.vhd
+    Info (12022): Found design unit 1: ext_signo-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/ext_signo.vhd Line: 9
+    Info (12023): Found entity 1: ext_signo File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/ext_signo.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file etapa2.bdf
+    Info (12023): Found entity 1: etapa2
+Info (12021): Found 2 design units, including 1 entities, in source file mux_dir.vhd
+    Info (12022): Found design unit 1: mux_dir-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_dir.vhd Line: 12
+    Info (12023): Found entity 1: mux_dir File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_dir.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file sumador.vhd
+    Info (12022): Found design unit 1: sumador-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/sumador.vhd Line: 14
+    Info (12023): Found entity 1: sumador File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/sumador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file memoria_datos.vhd
+    Info (12022): Found design unit 1: memoria_datos-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_datos.vhd Line: 16
+    Info (12023): Found entity 1: memoria_datos File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_datos.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file mux_src.vhd
+    Info (12022): Found design unit 1: mux_src-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_src.vhd Line: 15
+    Info (12023): Found entity 1: mux_src File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_src.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file registros.bdf
+    Info (12023): Found entity 1: registros
+Info (12021): Found 2 design units, including 1 entities, in source file mux_regs.vhd
+    Info (12022): Found design unit 1: mux_regs-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_regs.vhd Line: 16
+    Info (12023): Found entity 1: mux_regs File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_regs.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file deco_regw.vhd
+    Info (12022): Found design unit 1: deco_regw-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/deco_regw.vhd Line: 14
+    Info (12023): Found entity 1: deco_regw File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/deco_regw.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file u_control.vhd
+    Info (12022): Found design unit 1: u_control-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/u_control.vhd Line: 28
+    Info (12023): Found entity 1: u_control File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/u_control.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file reg_acoplo_3.vhd
+    Info (12022): Found design unit 1: reg_acoplo_3-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/reg_acoplo_3.vhd Line: 29
+    Info (12023): Found entity 1: reg_acoplo_3 File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/reg_acoplo_3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file upa.vhd
+    Info (12022): Found design unit 1: upa-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 20
+    Info (12023): Found entity 1: upa File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mux_1.vhd
+    Info (12022): Found design unit 1: mux_1-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_1.vhd Line: 11
+    Info (12023): Found entity 1: mux_1 File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_1.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file etapa3.bdf
+    Info (12023): Found entity 1: etapa3
+Info (12021): Found 2 design units, including 1 entities, in source file mux_result.vhd
+    Info (12022): Found design unit 1: mux_result-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_result.vhd Line: 14
+    Info (12023): Found entity 1: mux_result File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_result.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ccr.vhd
+    Info (12022): Found design unit 1: ccr-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/ccr.vhd Line: 21
+    Info (12023): Found entity 1: ccr File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/ccr.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file branch.vhd
+    Info (12022): Found design unit 1: branch-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/branch.vhd Line: 16
+    Info (12023): Found entity 1: branch File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/branch.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registro_1.vhd
+    Info (12022): Found design unit 1: registro_1-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_1.vhd Line: 11
+    Info (12023): Found entity 1: registro_1 File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file reg_acoplo_4.vhd
+    Info (12022): Found design unit 1: reg_acoplo_4-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/reg_acoplo_4.vhd Line: 15
+    Info (12023): Found entity 1: reg_acoplo_4 File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/reg_acoplo_4.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_dirw.vhd
+    Info (12022): Found design unit 1: mux_dirw-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_dirw.vhd Line: 10
+    Info (12023): Found entity 1: mux_dirw File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/mux_dirw.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registro_esp.vhdl
+    Info (12022): Found design unit 1: registro_esp-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_esp.vhdl Line: 12
+    Info (12023): Found entity 1: registro_esp File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_esp.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registro_pc2.vhd
+    Info (12022): Found design unit 1: registro_pc2-Behavioral File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_pc2.vhd Line: 11
+    Info (12023): Found entity 1: registro_pc2 File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/registro_pc2.vhd Line: 4
+Info (12127): Elaborating entity "pipeline" for the top level hierarchy
+Info (12128): Elaborating entity "registro_1" for hierarchy "registro_1:inst101"
+Info (12128): Elaborating entity "ccr" for hierarchy "ccr:inst"
+Info (12128): Elaborating entity "upa" for hierarchy "upa:inst33"
+Warning (10631): VHDL Process Statement warning at upa.vhd(23): inferring latch(es) for signal or variable "opres", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[0]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[1]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[2]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[3]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[4]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[5]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[6]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[7]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[8]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[9]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[10]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[11]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[12]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[13]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[14]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[15]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[16]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/upa.vhd Line: 23
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst40"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst40"
+Info (12133): Instantiated megafunction "BUSMUX:inst40" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "1"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst40|lpm_mux:$00000" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst40|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst40" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_7rc.tdf
+    Info (12023): Found entity 1: mux_7rc File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/db/mux_7rc.tdf Line: 22
+Info (12128): Elaborating entity "mux_7rc" for hierarchy "BUSMUX:inst40|lpm_mux:$00000|mux_7rc:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "reg_acoplo_3" for hierarchy "reg_acoplo_3:inst16"
+Info (12128): Elaborating entity "u_control" for hierarchy "u_control:inst206"
+Info (12128): Elaborating entity "registro_inst" for hierarchy "registro_inst:inst8"
+Info (12128): Elaborating entity "memoria_inst" for hierarchy "memoria_inst:inst1"
+Warning (10541): VHDL Signal Declaration warning at memoria_inst.vhd(16): used implicit default value for signal "mem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/memoria_inst.vhd Line: 16
+Info (12128): Elaborating entity "registro_pc2" for hierarchy "registro_pc2:inst34"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst9999"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst9999"
+Info (12133): Instantiated megafunction "BUSMUX:inst9999" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "16"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst9999|lpm_mux:$00000" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst9999|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst9999" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_tsc.tdf
+    Info (12023): Found entity 1: mux_tsc File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/db/mux_tsc.tdf Line: 22
+Info (12128): Elaborating entity "mux_tsc" for hierarchy "BUSMUX:inst9999|lpm_mux:$00000|mux_tsc:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "branch" for hierarchy "branch:inst22"
+Info (12128): Elaborating entity "incrementador" for hierarchy "incrementador:inst7"
+Info (12128): Elaborating entity "registro_pc" for hierarchy "registro_pc:inst24"
+Info (12128): Elaborating entity "mux_result" for hierarchy "mux_result:inst20"
+Info (12128): Elaborating entity "mux_dir" for hierarchy "mux_dir:inst10"
+Info (12128): Elaborating entity "sumador" for hierarchy "sumador:inst11"
+Info (12128): Elaborating entity "registros" for hierarchy "registros:inst700666"
+Info (12128): Elaborating entity "registro_esp" for hierarchy "registros:inst700666|registro_esp:ACCA"
+Info (12128): Elaborating entity "deco_regw" for hierarchy "registros:inst700666|deco_regw:inst1000"
+Info (12128): Elaborating entity "mux_regs" for hierarchy "registros:inst700666|mux_regs:inst"
+Info (12128): Elaborating entity "reg_acoplo_4" for hierarchy "reg_acoplo_4:inst107"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst39"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst39"
+Info (12133): Instantiated megafunction "BUSMUX:inst39" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "16"
+Info (12128): Elaborating entity "mux_dirw" for hierarchy "mux_dirw:inst17"
+Info (12128): Elaborating entity "mux_src" for hierarchy "mux_src:inst202"
+Info (12128): Elaborating entity "memoria_datos" for hierarchy "memoria_datos:inst41"
+Info (12128): Elaborating entity "ext_signo" for hierarchy "ext_signo:inst18"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "memoria_inst:inst1|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 51
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to mem_prog.mif
+Info (12130): Elaborated megafunction instantiation "memoria_inst:inst1|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "memoria_inst:inst1|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "51"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "mem_prog.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pi41.tdf
+    Info (12023): Found entity 1: altsyncram_pi41 File: C:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/db/altsyncram_pi41.tdf Line: 27
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "v" is stuck at GND
+    Warning (13410): Pin "c" is stuck at GND
+    Warning (13410): Pin "h" is stuck at GND
+    Warning (13410): Pin "i" is stuck at GND
+    Warning (13410): Pin "ACCA_D[15]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[14]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[13]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[12]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[11]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[10]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[9]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[8]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[7]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[6]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[5]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[4]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[3]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[2]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[1]" is stuck at GND
+    Warning (13410): Pin "ACCA_D[0]" is stuck at GND
+    Warning (13410): Pin "AUX_D[15]" is stuck at GND
+    Warning (13410): Pin "AUX_D[14]" is stuck at GND
+    Warning (13410): Pin "AUX_D[13]" is stuck at GND
+    Warning (13410): Pin "AUX_D[12]" is stuck at GND
+    Warning (13410): Pin "AUX_D[11]" is stuck at GND
+    Warning (13410): Pin "AUX_D[10]" is stuck at GND
+    Warning (13410): Pin "AUX_D[9]" is stuck at GND
+    Warning (13410): Pin "AUX_D[8]" is stuck at GND
+    Warning (13410): Pin "AUX_D[7]" is stuck at GND
+    Warning (13410): Pin "AUX_D[6]" is stuck at GND
+    Warning (13410): Pin "AUX_D[5]" is stuck at GND
+    Warning (13410): Pin "AUX_D[4]" is stuck at GND
+    Warning (13410): Pin "AUX_D[3]" is stuck at GND
+    Warning (13410): Pin "AUX_D[2]" is stuck at GND
+    Warning (13410): Pin "AUX_D[1]" is stuck at GND
+    Warning (13410): Pin "AUX_D[0]" is stuck at GND
+    Warning (13410): Pin "IX_D[15]" is stuck at GND
+    Warning (13410): Pin "IX_D[14]" is stuck at GND
+    Warning (13410): Pin "IX_D[13]" is stuck at GND
+    Warning (13410): Pin "IX_D[12]" is stuck at GND
+    Warning (13410): Pin "IX_D[11]" is stuck at GND
+    Warning (13410): Pin "IX_D[10]" is stuck at GND
+    Warning (13410): Pin "IX_D[9]" is stuck at GND
+    Warning (13410): Pin "IX_D[8]" is stuck at GND
+    Warning (13410): Pin "IX_D[7]" is stuck at GND
+    Warning (13410): Pin "IX_D[6]" is stuck at GND
+    Warning (13410): Pin "IX_D[5]" is stuck at GND
+    Warning (13410): Pin "IX_D[4]" is stuck at GND
+    Warning (13410): Pin "IX_D[3]" is stuck at GND
+    Warning (13410): Pin "IX_D[2]" is stuck at GND
+    Warning (13410): Pin "IX_D[1]" is stuck at GND
+    Warning (13410): Pin "IX_D[0]" is stuck at GND
+    Warning (13410): Pin "IY_D[15]" is stuck at GND
+    Warning (13410): Pin "IY_D[14]" is stuck at GND
+    Warning (13410): Pin "IY_D[13]" is stuck at GND
+    Warning (13410): Pin "IY_D[12]" is stuck at GND
+    Warning (13410): Pin "IY_D[11]" is stuck at GND
+    Warning (13410): Pin "IY_D[10]" is stuck at GND
+    Warning (13410): Pin "IY_D[9]" is stuck at GND
+    Warning (13410): Pin "IY_D[8]" is stuck at GND
+    Warning (13410): Pin "IY_D[7]" is stuck at GND
+    Warning (13410): Pin "IY_D[6]" is stuck at GND
+    Warning (13410): Pin "IY_D[5]" is stuck at GND
+    Warning (13410): Pin "IY_D[4]" is stuck at GND
+    Warning (13410): Pin "IY_D[3]" is stuck at GND
+    Warning (13410): Pin "IY_D[2]" is stuck at GND
+    Warning (13410): Pin "IY_D[1]" is stuck at GND
+    Warning (13410): Pin "IY_D[0]" is stuck at GND
+    Warning (13410): Pin "SP_D[15]" is stuck at GND
+    Warning (13410): Pin "SP_D[14]" is stuck at GND
+    Warning (13410): Pin "SP_D[13]" is stuck at GND
+    Warning (13410): Pin "SP_D[12]" is stuck at GND
+    Warning (13410): Pin "SP_D[11]" is stuck at GND
+    Warning (13410): Pin "SP_D[10]" is stuck at GND
+    Warning (13410): Pin "SP_D[9]" is stuck at GND
+    Warning (13410): Pin "SP_D[8]" is stuck at GND
+    Warning (13410): Pin "SP_D[7]" is stuck at GND
+    Warning (13410): Pin "SP_D[6]" is stuck at GND
+    Warning (13410): Pin "SP_D[5]" is stuck at GND
+    Warning (13410): Pin "SP_D[4]" is stuck at GND
+    Warning (13410): Pin "SP_D[3]" is stuck at GND
+    Warning (13410): Pin "SP_D[2]" is stuck at GND
+    Warning (13410): Pin "SP_D[1]" is stuck at GND
+    Warning (13410): Pin "SP_D[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 58 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 222 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 102 output pins
+    Info (21061): Implemented 86 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Mon May 30 19:19:02 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
+
+
