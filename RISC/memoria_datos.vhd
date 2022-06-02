@@ -18,15 +18,14 @@ architecture Behavioral of memoria_datos is
 	signal mem : memory;
 		
 	begin
-	
-	process (memW, clk, datoW, mem) 
-	begin
-		if (falling_edge(clk)) then		
-			if (memW = '1') then
-				mem(conv_integer(unsigned(direccion))) <= datoW;
-			else 
-				datos <= mem(conv_integer(unsigned(direccion)));
-			end if;
-		end if;
-	end process;
+		process (memW, clk, datoW, mem) 
+			begin
+				if (falling_edge(clk)) then		
+					if (memW = '1') then
+						mem(conv_integer(unsigned(direccion))) <= datoW;
+					else 
+						datos <= mem(conv_integer(unsigned(direccion)));
+					end if;
+				end if;
+		end process;
 end Behavioral;

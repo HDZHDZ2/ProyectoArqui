@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipeline
-Tue May 31 10:50:46 2022
+Thu Jun 02 00:52:10 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -23,15 +23,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  15. Parameter Settings for User Entity Instance: BUSMUX:inst9999
  16. Parameter Settings for User Entity Instance: BUSMUX:inst38
  17. Parameter Settings for User Entity Instance: BUSMUX:inst39
- 18. Parameter Settings for User Entity Instance: BUSMUX:inst12
- 19. Parameter Settings for User Entity Instance: BUSMUX:muxSel1
- 20. Parameter Settings for User Entity Instance: BUSMUX:inst42
- 21. Parameter Settings for User Entity Instance: BUSMUX:muxSel2
- 22. Parameter Settings for Inferred Entity Instance: memoria_inst:inst1|altsyncram:mem_rtl_0
- 23. altsyncram Parameter Settings by Entity Instance
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+ 18. Parameter Settings for User Entity Instance: BUSMUX:muxSel1
+ 19. Parameter Settings for User Entity Instance: BUSMUX:inst42
+ 20. Parameter Settings for User Entity Instance: BUSMUX:muxSel2
+ 21. Parameter Settings for Inferred Entity Instance: memoria_inst:inst1|altsyncram:mem_rtl_0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -57,7 +56,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 31 10:50:45 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 00:52:10 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pipeline                                    ;
 ; Top-level Entity Name              ; pipeline                                    ;
@@ -203,6 +202,7 @@ refer to the applicable agreement for further details.
 ; branch.vhd                       ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd             ;         ;
 ; registro_1.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd         ;         ;
 ; reg_acoplo_4.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd       ;         ;
+; mux_dirw.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dirw.vhd           ;         ;
 ; registro_esp.vhdl                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl      ;         ;
 ; registro_pc2.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd       ;         ;
 ; mem_prog.mif                     ; yes             ; User Memory Initialization File    ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mem_prog.mif           ;         ;
@@ -218,7 +218,6 @@ refer to the applicable agreement for further details.
 ; altshift.inc                     ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altshift.inc                                             ;         ;
 ; db/mux_7rc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/mux_7rc.tdf         ;         ;
 ; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/mux_tsc.tdf         ;         ;
-; db/mux_8rc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/mux_8rc.tdf         ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                                           ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                                    ;         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                                           ;         ;
@@ -360,10 +359,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registro_pc:inst15|valor_interno[1]                         ; Lost fanout                                 ;
 ; registro_pc:inst23|valor_interno[0]                         ; Stuck at GND due to stuck port clock_enable ;
 ; registro_pc:inst15|valor_interno[0]                         ; Lost fanout                                 ;
-; reg_acoplo_4:inst107|seldirw[1]                             ; Lost fanout                                 ;
-; reg_acoplo_3:inst16|seldirw[1]                              ; Lost fanout                                 ;
 ; reg_acoplo_4:inst107|seldirw[0]                             ; Lost fanout                                 ;
 ; reg_acoplo_3:inst16|seldirw[0]                              ; Lost fanout                                 ;
+; reg_acoplo_4:inst107|seldirw[1]                             ; Lost fanout                                 ;
+; reg_acoplo_3:inst16|seldirw[1]                              ; Lost fanout                                 ;
 ; registro_pc:inst6|valor_interno[0..15]                      ; Lost fanout                                 ;
 ; registro_inst:inst8|valor_interno[0..15]                    ; Lost fanout                                 ;
 ; registro_pc:inst24|valor_interno[0..15]                     ; Stuck at GND due to stuck port clock_enable ;
@@ -389,9 +388,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reg_acoplo_4:inst107|memw                                   ; Stuck at GND due to stuck port data_in      ;
 ; ccr:inst|vi                                                 ; Stuck at GND due to stuck port data_in      ;
 ; registro_1:inst103|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|selfalgs[0]                             ; Merged with reg_acoplo_3:inst16|selc        ;
 ; ccr:inst|hi                                                 ; Merged with ccr:inst|ii                     ;
 ; ccr:inst|ci                                                 ; Merged with ccr:inst|ii                     ;
+; reg_acoplo_3:inst16|selfalgs[0]                             ; Merged with reg_acoplo_3:inst16|selc        ;
 ; reg_acoplo_3:inst16|selop[2]                                ; Merged with reg_acoplo_3:inst16|selc        ;
 ; ccr:inst|ii                                                 ; Stuck at GND due to stuck port data_in      ;
 ; registro_1:inst106|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
@@ -532,9 +531,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reg_acoplo_3:inst16|selfalgs[3]      ; Stuck at GND                   ; ccr:inst|vi, registro_1:inst103|valor_interno, ccr:inst|ii,                     ;
 ;                                      ; due to stuck port data_in      ; registro_1:inst106|valor_interno, registro_1:inst105|valor_interno,             ;
 ;                                      ;                                ; registro_1:inst104|valor_interno, ccr:inst|ni, registro_1:inst101|valor_interno ;
-; registro_pc:inst23|valor_interno[15] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[15], reg_acoplo_4:inst107|seldirw[1],          ;
-;                                      ; due to stuck port clock_enable ; reg_acoplo_3:inst16|seldirw[1], reg_acoplo_4:inst107|seldirw[0],                ;
-;                                      ;                                ; reg_acoplo_3:inst16|seldirw[0], registro_inst:inst8|valor_interno[15]           ;
+; registro_pc:inst23|valor_interno[15] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[15], reg_acoplo_4:inst107|seldirw[0],          ;
+;                                      ; due to stuck port clock_enable ; reg_acoplo_3:inst16|seldirw[0], reg_acoplo_4:inst107|seldirw[1],                ;
+;                                      ;                                ; reg_acoplo_3:inst16|seldirw[1], registro_inst:inst8|valor_interno[15]           ;
 ; registro_pc:inst24|valor_interno[13] ; Stuck at GND                   ; registros:inst700666|registro_esp:SP|valor_interno[13],                         ;
 ;                                      ; due to stuck port clock_enable ; registros:inst700666|registro_esp:IY|valor_interno[13],                         ;
 ;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[13],                         ;
@@ -651,16 +650,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                              ;
 +----------------+-------+-----------------------------------+
 ; WIDTH          ; 16    ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst12 ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; WIDTH          ; 2     ; Untyped                           ;
 +----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -816,7 +805,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 31 10:50:35 2022
+    Info: Processing started: Thu Jun 02 00:52:00 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -903,7 +892,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file registr
     Info (12022): Found design unit 1: registro_pc2-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd Line: 12
     Info (12023): Found entity 1: registro_pc2 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file u_detencion.vhd
-    Info (12022): Found design unit 1: u_detencion-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd Line: 16
+    Info (12022): Found design unit 1: u_detencion-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd Line: 13
     Info (12023): Found entity 1: u_detencion File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux_detenciones.vhd
     Info (12022): Found design unit 1: mux_detencion-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd Line: 45
@@ -974,15 +963,7 @@ Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst39"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst39"
 Info (12133): Instantiated megafunction "BUSMUX:inst39" with the following parameter:
     Info (12134): Parameter "WIDTH" = "16"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst12"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst12"
-Info (12133): Instantiated megafunction "BUSMUX:inst12" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "2"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst12|lpm_mux:$00000" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
-Info (12131): Elaborated megafunction instantiation "BUSMUX:inst12|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst12" File: d:/quartus/quartus/libraries/megafunctions/busmux.tdf Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_8rc.tdf
-    Info (12023): Found entity 1: mux_8rc File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/mux_8rc.tdf Line: 22
-Info (12128): Elaborating entity "mux_8rc" for hierarchy "BUSMUX:inst12|lpm_mux:$00000|mux_8rc:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "mux_dirw" for hierarchy "mux_dirw:inst17"
 Info (12128): Elaborating entity "u_anticipacion" for hierarchy "u_anticipacion:inst2"
 Info (12128): Elaborating entity "mux_src" for hierarchy "mux_src:inst202"
 Info (12128): Elaborating entity "memoria_datos" for hierarchy "memoria_datos:inst41"
@@ -1144,8 +1125,8 @@ Info (21057): Implemented 135 device resources after synthesis - the final resou
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
     Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Tue May 31 10:50:46 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Thu Jun 02 00:52:10 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
 
 

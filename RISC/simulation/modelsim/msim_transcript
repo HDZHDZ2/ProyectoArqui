@@ -1,0 +1,295 @@
+# Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl
+# do pipeline_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/incrementador.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/incrementador.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity incrementador
+# -- Compiling architecture Behavioral of incrementador
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro_pc
+# -- Compiling architecture Behavioral of registro_pc
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity memoria_inst
+# -- Compiling architecture Behavioral of memoria_inst
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_inst.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_inst.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro_inst
+# -- Compiling architecture Behavioral of registro_inst
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ext_signo.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ext_signo.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ext_signo
+# -- Compiling architecture Behavioral of ext_signo
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dir.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_dir
+# -- Compiling architecture Behavioral of mux_dir
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/sumador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/sumador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity sumador
+# -- Compiling architecture Behavioral of sumador
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_datos.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_datos.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity memoria_datos
+# -- Compiling architecture Behavioral of memoria_datos
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_src.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:35 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_src.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_src
+# -- Compiling architecture Behavioral of mux_src
+# End time: 20:02:35 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_regs.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_regs.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_regs
+# -- Compiling architecture Behavioral of mux_regs
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/deco_regw.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/deco_regw.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity deco_regw
+# -- Compiling architecture Behavioral of deco_regw
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity u_control
+# -- Compiling architecture Behavioral of u_control
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_acoplo_3
+# -- Compiling architecture Behavioral of reg_acoplo_3
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity upa
+# -- Compiling architecture Behavioral of upa
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_result.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_result.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_result
+# -- Compiling architecture Behavioral of mux_result
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ccr.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ccr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ccr
+# -- Compiling architecture Behavioral of ccr
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity branch
+# -- Compiling architecture Behavioral of branch
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro_1
+# -- Compiling architecture Behavioral of registro_1
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_acoplo_4
+# -- Compiling architecture Behavioral of reg_acoplo_4
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro_esp
+# -- Compiling architecture Behavioral of registro_esp
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro_pc2
+# -- Compiling architecture Behavioral of registro_pc2
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity u_detencion
+# -- Compiling architecture Behavioral of u_detencion
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_detencion
+# -- Compiling architecture Behavioral of mux_detencion
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_anticipacion.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:36 on May 31,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_anticipacion.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity u_anticipacion
+# -- Compiling architecture Behavioral of u_anticipacion
+# End time: 20:02:36 on May 31,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

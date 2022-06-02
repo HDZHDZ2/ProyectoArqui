@@ -1,0 +1,982 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/modelsim
+Ebranch
+Z1 w1587494271
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd
+Z7 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd
+l0
+L6
+V<=WIc_LFi>3kYmOIK7^1J1
+!s100 fPm5DXQ_Y68hKWNK05GVa2
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1654045356
+!i10b 1
+Z10 !s108 1654045356.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd|
+Z12 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/branch.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 6 branch 0 22 <=WIc_LFi>3kYmOIK7^1J1
+l17
+L16
+Vlbc?h1lHf=QP=zHY1b6bD3
+!s100 mZXUKFoG`RhML=I@Dcz:22
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eccr
+Z15 w1653956254
+R4
+R5
+R0
+Z16 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ccr.vhd
+Z17 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ccr.vhd
+l0
+L4
+V:]IbB;2bY70D7BfL49NBD3
+!s100 ciC^3o=`@55[gcd9UZ=Ni2
+R8
+31
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ccr.vhd|
+Z19 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ccr.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 3 ccr 0 22 :]IbB;2bY70D7BfL49NBD3
+l29
+L21
+VPhDMF3Ki<SjTMj^WI;Kei2
+!s100 GN^6W5^]afV`][kA6K7cG2
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Edeco_regw
+Z20 w1572936806
+R4
+R5
+R0
+Z21 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/deco_regw.vhd
+Z22 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/deco_regw.vhd
+l0
+L4
+VgDVSL@BI0kQaW@o`0FBc62
+!s100 9o8]e[4BPTT918cgDkFIB0
+R8
+31
+R9
+!i10b 1
+R10
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/deco_regw.vhd|
+Z24 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/deco_regw.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 9 deco_regw 0 22 gDVSL@BI0kQaW@o`0FBc62
+l15
+L14
+V3=fYT7z<`zZa:UX^a2Uh>1
+!s100 maB3nVcjLP2[mJ__>hJN[0
+R8
+31
+R9
+!i10b 1
+R10
+R23
+R24
+!i113 1
+R13
+R14
+Eext_signo
+Z25 w1587493890
+R4
+R5
+R0
+Z26 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ext_signo.vhd
+Z27 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ext_signo.vhd
+l0
+L4
+V4@]4U;bdXDW=64Ib16:_^3
+!s100 O[DFG>MR9]6fB@gEFX]4k3
+R8
+31
+Z28 !s110 1654045355
+!i10b 1
+Z29 !s108 1654045355.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ext_signo.vhd|
+Z31 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/ext_signo.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 9 ext_signo 0 22 4@]4U;bdXDW=64Ib16:_^3
+l10
+L9
+VnP_[IaKMZZP9gYdia>=PU1
+!s100 8gie=>8BdOz2L6^P]=A=72
+R8
+31
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R13
+R14
+Eincrementador
+Z32 w1527969992
+R2
+R3
+R4
+R5
+R0
+Z33 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/incrementador.vhdl
+Z34 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/incrementador.vhdl
+l0
+L6
+VSXgV_eA_ZSm>SeoI?7a_W0
+!s100 >4_n?WY<Pao2__k4GE[0H1
+R8
+31
+R28
+!i10b 1
+R29
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/incrementador.vhdl|
+Z36 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/incrementador.vhdl|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 13 incrementador 0 22 SXgV_eA_ZSm>SeoI?7a_W0
+l12
+L11
+V`lgkG;gVe5YNMVb[c8All2
+!s100 OEd1mkcaMiKQ[bUOg4clk1
+R8
+31
+R28
+!i10b 1
+R29
+R35
+R36
+!i113 1
+R13
+R14
+Ememoria_datos
+Z37 w1654044380
+R2
+R3
+R4
+R5
+R0
+Z38 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_datos.vhd
+Z39 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_datos.vhd
+l0
+L8
+VDFIgnRN<nJVaY]F]fV>`H0
+!s100 @]:zic^1T]@]8mdQ40nz:2
+R8
+31
+R28
+!i10b 1
+R29
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_datos.vhd|
+Z41 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_datos.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 13 memoria_datos 0 22 DFIgnRN<nJVaY]F]fV>`H0
+l20
+L16
+VV4hEL<`?4lM@PV]=6AA8o2
+!s100 ofJ8VRVEX]SXi^SXHHl7?2
+R8
+31
+R28
+!i10b 1
+R29
+R40
+R41
+!i113 1
+R13
+R14
+Ememoria_inst
+Z42 w1587491179
+R2
+R3
+R4
+R5
+R0
+Z43 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd
+Z44 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd
+l0
+L8
+V5hNOPzY7gVz?kC^L1ci:a0
+!s100 3VicLikW]aOWTOGF[L51=1
+R8
+31
+R28
+!i10b 1
+R29
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd|
+Z46 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 12 memoria_inst 0 22 5hNOPzY7gVz?kC^L1ci:a0
+l22
+L13
+VM^FM:a]gk=;lP`l9lHzUY3
+!s100 eibFWNnG38fOeJl5Ym7Jo3
+R8
+31
+R28
+!i10b 1
+R29
+R45
+R46
+!i113 1
+R13
+R14
+Emux_detencion
+Z47 w1653957947
+R4
+R5
+R0
+Z48 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd
+Z49 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd
+l0
+L4
+V?UHJ]HH<XMJYDEfecj37U2
+!s100 AVB9K>h`9Q`C7mg0Pf0=A1
+R8
+31
+R9
+!i10b 1
+R10
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd|
+Z51 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_detenciones.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 13 mux_detencion 0 22 ?UHJ]HH<XMJYDEfecj37U2
+l46
+L45
+V7VVeg9ho=JR7FGG2d8M5o1
+!s100 J:PA^bdghDdzGB3cN?GF<3
+R8
+31
+R9
+!i10b 1
+R10
+R50
+R51
+!i113 1
+R13
+R14
+Emux_dir
+Z52 w1587492310
+R4
+R5
+R0
+Z53 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dir.vhd
+Z54 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dir.vhd
+l0
+L4
+VVYfL:1^Z^Cb`E2h7jH9<J0
+!s100 ]5:`dUXB[`YB=1_`c<Q?f1
+R8
+31
+R28
+!i10b 1
+R29
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dir.vhd|
+Z56 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_dir.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 7 mux_dir 0 22 VYfL:1^Z^Cb`E2h7jH9<J0
+l13
+L12
+VS7eW>g[AA6gRMV5Od8]S32
+!s100 ASk6J<ILhd;6Wg=PZgMR91
+R8
+31
+R28
+!i10b 1
+R29
+R55
+R56
+!i113 1
+R13
+R14
+Emux_regs
+Z57 w1587493227
+R4
+R5
+R0
+Z58 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_regs.vhd
+Z59 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_regs.vhd
+l0
+L4
+V``SG`o`1:zA]YWT6aaH563
+!s100 >d4PYFM8JX]CaM?g?;AX01
+R8
+31
+R9
+!i10b 1
+R10
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_regs.vhd|
+Z61 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_regs.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 8 mux_regs 0 22 ``SG`o`1:zA]YWT6aaH563
+l17
+L16
+V]FeRVoGooPQa2AODcB=El0
+!s100 7eeDml2IG7QWF;<?C8AiH3
+R8
+31
+R9
+!i10b 1
+R10
+R60
+R61
+!i113 1
+R13
+R14
+Emux_result
+Z62 w1587492231
+R4
+R5
+R0
+Z63 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_result.vhd
+Z64 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_result.vhd
+l0
+L4
+V1ANLjNi4<Z]SJ6<7lGBMR0
+!s100 ?k`[;W>Hz1eS=2>J;Oc>n0
+R8
+31
+R9
+!i10b 1
+R10
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_result.vhd|
+Z66 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_result.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 10 mux_result 0 22 1ANLjNi4<Z]SJ6<7lGBMR0
+l15
+L14
+VlPK:fDeO`Ql;PFZ`bc?dN0
+!s100 3V=n]?^67KEl6643<F34L2
+R8
+31
+R9
+!i10b 1
+R10
+R65
+R66
+!i113 1
+R13
+R14
+Emux_src
+Z67 w1587492002
+R4
+R5
+R0
+Z68 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_src.vhd
+Z69 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_src.vhd
+l0
+L4
+VI[o8XT4lCh9i?9SoDn8Z_2
+!s100 ^S0?:>:NbV[nK3BSi6b^]1
+R8
+31
+R28
+!i10b 1
+R29
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_src.vhd|
+Z71 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/mux_src.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 7 mux_src 0 22 I[o8XT4lCh9i?9SoDn8Z_2
+l16
+L15
+V5Wz<@lGE_9Zfg[daU55iA0
+!s100 EJW^DUeAzzJ?;l^75Fz:N2
+R8
+31
+R28
+!i10b 1
+R29
+R70
+R71
+!i113 1
+R13
+R14
+Ereg_acoplo_3
+Z72 w1587493402
+R4
+R5
+R0
+Z73 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd
+Z74 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd
+l0
+L4
+VD3d3^S^R?2KMD3EaciJ?Z3
+!s100 B[igZgYH<R^9oicgYP4@Y3
+R8
+31
+R9
+!i10b 1
+R10
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd|
+Z76 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 12 reg_acoplo_3 0 22 D3d3^S^R?2KMD3EaciJ?Z3
+l43
+L29
+V<<]SN5KK?>h:BCkVhM7NR0
+!s100 ilc=zS=?GcKX<`?XKoJHK1
+R8
+31
+R9
+!i10b 1
+R10
+R75
+R76
+!i113 1
+R13
+R14
+Ereg_acoplo_4
+Z77 w1587494259
+R4
+R5
+R0
+Z78 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd
+Z79 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd
+l0
+L4
+Vkzh]h<N0JRz<^m[38dfX00
+!s100 bZIiYPDMel`ELdlR:6Fc40
+R8
+31
+R9
+!i10b 1
+R10
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd|
+Z81 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_4.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 12 reg_acoplo_4 0 22 kzh]h<N0JRz<^m[38dfX00
+l21
+L15
+VYkYa9?=G]EWRFGhX`kY?53
+!s100 Cez;ZNR`Xli_@i6zk075E0
+R8
+31
+R9
+!i10b 1
+R10
+R80
+R81
+!i113 1
+R13
+R14
+Eregistro_1
+Z82 w1528045889
+R4
+R5
+R0
+Z83 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd
+Z84 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd
+l0
+L4
+VEBP?UEG76cKM?WFzgoklJ0
+!s100 CZNM28FU1O<OVT=QIaoUh3
+R8
+31
+R9
+!i10b 1
+R10
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd|
+Z86 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_1.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 10 registro_1 0 22 EBP?UEG76cKM?WFzgoklJ0
+l14
+L11
+VSB;OAbD>abPZ:z=cR7H6B1
+!s100 @a;i>JKoF:R_]19ZU6]7d0
+R8
+31
+R9
+!i10b 1
+R10
+R85
+R86
+!i113 1
+R13
+R14
+Eregistro_esp
+Z87 w1587488525
+R4
+R5
+R0
+Z88 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl
+Z89 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl
+l0
+L4
+V2DC2YTm1XfQiBHW>Lb^k[0
+!s100 ]m_KgkJTFk3GTf;>C7eX90
+R8
+31
+R9
+!i10b 1
+R10
+Z90 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl|
+Z91 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_esp.vhdl|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 12 registro_esp 0 22 2DC2YTm1XfQiBHW>Lb^k[0
+l16
+L12
+VPhAo4J:22]ghiWHaoSO;e2
+!s100 48<0RaWZa?YJ5:1@mVEVl0
+R8
+31
+R9
+!i10b 1
+R10
+R90
+R91
+!i113 1
+R13
+R14
+Eregistro_inst
+Z92 w1653957049
+R4
+R5
+R0
+Z93 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_inst.vhd
+Z94 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_inst.vhd
+l0
+L4
+VUg8Oh3S[1TB?YXGeQ1VCQ1
+!s100 KJME`F5IO?WMfHiJGNZGm0
+R8
+31
+R28
+!i10b 1
+R29
+Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_inst.vhd|
+Z96 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_inst.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 13 registro_inst 0 22 Ug8Oh3S[1TB?YXGeQ1VCQ1
+l18
+L14
+V8`4eHHi<ODY=o0flciffP3
+!s100 4l7imLiW]BKK=4oAD3eB?0
+R8
+31
+R28
+!i10b 1
+R29
+R95
+R96
+!i113 1
+R13
+R14
+Eregistro_pc
+Z97 w1653959050
+R4
+R5
+R0
+Z98 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc.vhd
+Z99 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc.vhd
+l0
+L4
+VUB1GJ;K?jnlC18NQB@dbE1
+!s100 ?lZm50Lgj1<5`jLHLl28]0
+R8
+31
+R28
+!i10b 1
+R29
+Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc.vhd|
+Z101 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 11 registro_pc 0 22 UB1GJ;K?jnlC18NQB@dbE1
+l16
+L12
+V95;YAdV90b7EE1i[P[:E40
+!s100 bZVUYERY@gj:dL;bacNPT3
+R8
+31
+R28
+!i10b 1
+R29
+R100
+R101
+!i113 1
+R13
+R14
+Eregistro_pc2
+Z102 w1653958921
+R4
+R5
+R0
+Z103 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd
+Z104 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd
+l0
+L4
+VGU@O:<aOOKb_D_f8U5=bF0
+!s100 6EAi4ZbJn[`EL1:z8VP]l1
+R8
+31
+R9
+!i10b 1
+R10
+Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd|
+Z106 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/registro_pc2.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 12 registro_pc2 0 22 GU@O:<aOOKb_D_f8U5=bF0
+l16
+L12
+VYm3TKZ93F57o^T6<mYfNM0
+!s100 7=Y2cHoze19BQf[GfdYU`3
+R8
+31
+R9
+!i10b 1
+R10
+R105
+R106
+!i113 1
+R13
+R14
+Esumador
+Z107 w1587493818
+R2
+R3
+R4
+R5
+R0
+Z108 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/sumador.vhd
+Z109 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/sumador.vhd
+l0
+L6
+VRLHWU]8z]=kFG3_a4@O3J2
+!s100 AXoDjW]Q]P;3>26Lc7fCN1
+R8
+31
+R28
+!i10b 1
+R29
+Z110 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/sumador.vhd|
+Z111 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/sumador.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 7 sumador 0 22 RLHWU]8z]=kFG3_a4@O3J2
+l15
+L14
+VQTTgQh7F]>BSzloYKJ=UG1
+!s100 U[Q7EcZ5gATR5LDE082@93
+R8
+31
+R28
+!i10b 1
+R29
+R110
+R111
+!i113 1
+R13
+R14
+Eu_anticipacion
+Z112 w1654010313
+R2
+R3
+R4
+R5
+R0
+Z113 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_anticipacion.vhd
+Z114 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_anticipacion.vhd
+l0
+L6
+Vk9]BkWWYnhe7I9zgTPZPS2
+!s100 ZaIIO5DPG][Lgde1PNc0E0
+R8
+31
+R9
+!i10b 1
+R10
+Z115 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_anticipacion.vhd|
+Z116 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_anticipacion.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 14 u_anticipacion 0 22 k9]BkWWYnhe7I9zgTPZPS2
+l15
+L14
+V@I2_?<BhT_j1eV78_2JnC0
+!s100 :kchE<B?L]1W[K<Ffj?oR0
+R8
+31
+R9
+!i10b 1
+R10
+R115
+R116
+!i113 1
+R13
+R14
+Eu_control
+Z117 w1587507801
+R2
+R3
+R4
+R5
+R0
+Z118 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_control.vhd
+Z119 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_control.vhd
+l0
+L6
+V3FWoWV?O_7n^e4QzO[KlP2
+!s100 X^RdKi[^eG47lI`hAVXXz0
+R8
+31
+R9
+!i10b 1
+R10
+Z120 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_control.vhd|
+Z121 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_control.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 9 u_control 0 22 3FWoWV?O_7n^e4QzO[KlP2
+l29
+L28
+V:b8D31L[TDGN=Cc;lFT371
+!s100 S[9Oah476>3DV=5][VnC03
+R8
+31
+R9
+!i10b 1
+R10
+R120
+R121
+!i113 1
+R13
+R14
+Eu_detencion
+Z122 w1653956589
+R4
+R5
+R0
+Z123 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd
+Z124 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd
+l0
+L4
+VPhaT;YgTjkdQOjEA2eI;M2
+!s100 LXIEZ1IhiXgFa7l=2nlF61
+R8
+31
+R9
+!i10b 1
+R10
+Z125 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd|
+Z126 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/u_detencion.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 11 u_detencion 0 22 PhaT;YgTjkdQOjEA2eI;M2
+l18
+L16
+VOW=[ZMJoVD?mO7c_8Q0:X3
+!s100 8^^KF>2DljXPDj=[[giQI2
+R8
+31
+R9
+!i10b 1
+R10
+R125
+R126
+!i113 1
+R13
+R14
+Eupa
+Z127 w1587505353
+Z128 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z129 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+R2
+R3
+R4
+R5
+R0
+Z130 8C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd
+Z131 FC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd
+l0
+L7
+V=KdQ<Z53?:FZXi<19h`Sk2
+!s100 o<9O5[[g^>YDdV5R96h_k1
+R8
+31
+R9
+!i10b 1
+R10
+Z132 !s90 -reportprogress|300|-93|-work|work|C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd|
+Z133 !s107 C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R128
+R129
+R2
+R3
+R4
+R5
+DEx4 work 3 upa 0 22 =KdQ<Z53?:FZXi<19h`Sk2
+l22
+L20
+V<2Zekj3CMQTEQ]596j^ZD2
+!s100 Po2Jz5X7:=kE32:To4akl0
+R8
+31
+R9
+!i10b 1
+R10
+R132
+R133
+!i113 1
+R13
+R14
