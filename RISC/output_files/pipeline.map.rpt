@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipeline
-Thu Jun 02 00:52:10 2022
+Thu Jun 02 13:07:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,23 +14,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Registers Packed Into Inferred Megafunctions
- 13. Source assignments for memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated
- 14. Parameter Settings for User Entity Instance: BUSMUX:inst40
- 15. Parameter Settings for User Entity Instance: BUSMUX:inst9999
- 16. Parameter Settings for User Entity Instance: BUSMUX:inst38
- 17. Parameter Settings for User Entity Instance: BUSMUX:inst39
- 18. Parameter Settings for User Entity Instance: BUSMUX:muxSel1
- 19. Parameter Settings for User Entity Instance: BUSMUX:inst42
- 20. Parameter Settings for User Entity Instance: BUSMUX:muxSel2
- 21. Parameter Settings for Inferred Entity Instance: memoria_inst:inst1|altsyncram:mem_rtl_0
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated
+ 16. Parameter Settings for User Entity Instance: BUSMUX:inst40
+ 17. Parameter Settings for User Entity Instance: BUSMUX:inst9999
+ 18. Parameter Settings for User Entity Instance: BUSMUX:inst38
+ 19. Parameter Settings for User Entity Instance: BUSMUX:inst39
+ 20. Parameter Settings for User Entity Instance: BUSMUX:muxSel1
+ 21. Parameter Settings for User Entity Instance: BUSMUX:inst42
+ 22. Parameter Settings for User Entity Instance: BUSMUX:muxSel2
+ 23. Parameter Settings for Inferred Entity Instance: memoria_inst:inst1|altsyncram:mem_rtl_0
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -56,18 +58,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 02 00:52:10 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 13:07:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pipeline                                    ;
 ; Top-level Entity Name              ; pipeline                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 15                                          ;
-;     Total combinational functions  ; 13                                          ;
-;     Dedicated logic registers      ; 10                                          ;
-; Total registers                    ; 10                                          ;
+; Total logic elements               ; 250                                         ;
+;     Total combinational functions  ; 194                                         ;
+;     Dedicated logic registers      ; 120                                         ;
+; Total registers                    ; 120                                         ;
 ; Total pins                         ; 104                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 816                                         ;
+; Total memory bits                  ; 1,632                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -172,7 +174,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -234,31 +237,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 15          ;
+; Estimated Total logic elements              ; 250         ;
 ;                                             ;             ;
-; Total combinational functions               ; 13          ;
+; Total combinational functions               ; 194         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 5           ;
-;     -- 3 input functions                    ; 1           ;
-;     -- <=2 input functions                  ; 7           ;
+;     -- 4 input functions                    ; 117         ;
+;     -- 3 input functions                    ; 43          ;
+;     -- <=2 input functions                  ; 34          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 9           ;
-;     -- arithmetic mode                      ; 4           ;
+;     -- normal mode                          ; 173         ;
+;     -- arithmetic mode                      ; 21          ;
 ;                                             ;             ;
-; Total registers                             ; 10          ;
-;     -- Dedicated logic registers            ; 10          ;
+; Total registers                             ; 120         ;
+;     -- Dedicated logic registers            ; 120         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 104         ;
-; Total memory bits                           ; 816         ;
+; Total memory bits                           ; 1632        ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; RELOJ~input ;
-; Maximum fan-out                             ; 26          ;
-; Total fan-out                               ; 280         ;
-; Average fan-out                             ; 1.13        ;
+; Maximum fan-out                             ; 152         ;
+; Total fan-out                               ; 1448        ;
+; Average fan-out                             ; 2.61        ;
 +---------------------------------------------+-------------+
 
 
@@ -267,15 +270,38 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
-; |pipeline                                 ; 13 (0)              ; 10 (0)                    ; 816         ; 0            ; 0       ; 0         ; 104  ; 0            ; |pipeline                                                                        ; pipeline        ; work         ;
-;    |ccr:inst|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ccr:inst                                                               ; ccr             ; work         ;
-;    |memoria_inst:inst1|                   ; 0 (0)               ; 1 (1)                     ; 816         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1                                                     ; memoria_inst    ; work         ;
-;       |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 816         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
-;          |altsyncram_pi41:auto_generated| ; 0 (0)               ; 0 (0)                     ; 816         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated ; altsyncram_pi41 ; work         ;
-;    |reg_acoplo_3:inst16|                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|reg_acoplo_3:inst16                                                    ; reg_acoplo_3    ; work         ;
+; |pipeline                                 ; 194 (0)             ; 120 (0)                   ; 1632        ; 0            ; 0       ; 0         ; 104  ; 0            ; |pipeline                                                                        ; pipeline        ; work         ;
+;    |busmux:muxSel1|                       ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|busmux:muxSel1                                                         ; busmux          ; work         ;
+;       |lpm_mux:$00000|                    ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|busmux:muxSel1|lpm_mux:$00000                                          ; lpm_mux         ; work         ;
+;          |mux_tsc:auto_generated|         ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|busmux:muxSel1|lpm_mux:$00000|mux_tsc:auto_generated                   ; mux_tsc         ; work         ;
+;    |busmux:muxSel2|                       ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|busmux:muxSel2                                                         ; busmux          ; work         ;
+;       |lpm_mux:$00000|                    ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|busmux:muxSel2|lpm_mux:$00000                                          ; lpm_mux         ; work         ;
+;          |mux_tsc:auto_generated|         ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|busmux:muxSel2|lpm_mux:$00000|mux_tsc:auto_generated                   ; mux_tsc         ; work         ;
+;    |ccr:inst|                             ; 2 (2)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|ccr:inst                                                               ; ccr             ; work         ;
+;    |memoria_inst:inst1|                   ; 0 (0)               ; 1 (1)                     ; 1632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1                                                     ; memoria_inst    ; work         ;
+;       |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
+;          |altsyncram_pi41:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated ; altsyncram_pi41 ; work         ;
+;    |mux_detencion:inst9|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_detencion:inst9                                                    ; mux_detencion   ; work         ;
+;    |mux_result:inst20|                    ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_result:inst20                                                      ; mux_result      ; work         ;
+;    |mux_src:inst202|                      ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|mux_src:inst202                                                        ; mux_src         ; work         ;
+;    |reg_acoplo_3:inst16|                  ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|reg_acoplo_3:inst16                                                    ; reg_acoplo_3    ; work         ;
+;    |reg_acoplo_4:inst107|                 ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|reg_acoplo_4:inst107                                                   ; reg_acoplo_4    ; work         ;
+;    |registro_1:inst101|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst101                                                     ; registro_1      ; work         ;
 ;    |registro_1:inst102|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst102                                                     ; registro_1      ; work         ;
+;    |registro_1:inst103|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst103                                                     ; registro_1      ; work         ;
+;    |registro_1:inst104|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst104                                                     ; registro_1      ; work         ;
+;    |registro_1:inst105|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_1:inst105                                                     ; registro_1      ; work         ;
 ;    |registro_pc2:inst34|                  ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc2:inst34                                                    ; registro_pc2    ; work         ;
-;    |u_control:inst206|                    ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|u_control:inst206                                                      ; u_control       ; work         ;
+;    |registro_pc:inst14|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc:inst14                                                     ; registro_pc     ; work         ;
+;    |registro_pc:inst24|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc:inst24                                                     ; registro_pc     ; work         ;
+;    |registro_pc:inst700|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registro_pc:inst700                                                    ; registro_pc     ; work         ;
+;    |registros:inst700666|                 ; 0 (0)               ; 48 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registros:inst700666                                                   ; registros       ; work         ;
+;       |registro_esp:ACCA|                 ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registros:inst700666|registro_esp:ACCA                                 ; registro_esp    ; work         ;
+;       |registro_esp:ACCB|                 ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registros:inst700666|registro_esp:ACCB                                 ; registro_esp    ; work         ;
+;       |registro_esp:AUX|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|registros:inst700666|registro_esp:AUX                                  ; registro_esp    ; work         ;
+;    |u_anticipacion:inst12|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|u_anticipacion:inst12                                                  ; u_anticipacion  ; work         ;
+;    |u_control:inst19|                     ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|u_control:inst19                                                       ; u_control       ; work         ;
+;    |upa:inst33|                           ; 75 (75)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline|upa:inst33                                                             ; upa             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -289,296 +315,185 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                        ;
-+-------------------------------------------------------------+---------------------------------------------+
-; Register name                                               ; Reason for Removal                          ;
-+-------------------------------------------------------------+---------------------------------------------+
-; registro_pc:inst14|valor_interno[0..15]                     ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst700|valor_interno[15]                       ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[15]                              ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[14]                       ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[14]                              ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[13]                       ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[13]                              ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[12]                       ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[12]                              ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[11]                       ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[11]                              ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[10]                       ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[10]                              ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[9]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[9]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[8]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[8]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[7]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[7]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[6]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[6]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[5]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[5]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[4]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[4]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[3]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[3]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[2]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[2]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[1]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[1]                               ; Lost fanout                                 ;
-; registro_pc:inst700|valor_interno[0]                        ; Stuck at GND due to stuck port clock_enable ;
-; memoria_datos:inst41|datos[0]                               ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[15]                        ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[15]                        ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[14]                        ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[14]                        ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[13]                        ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[13]                        ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[12]                        ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[12]                        ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[11]                        ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[11]                        ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[10]                        ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[10]                        ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[9]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[9]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[8]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[8]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[7]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[7]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[6]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[6]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[5]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[5]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[4]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[4]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[3]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[3]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[2]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[2]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[1]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[1]                         ; Lost fanout                                 ;
-; registro_pc:inst23|valor_interno[0]                         ; Stuck at GND due to stuck port clock_enable ;
-; registro_pc:inst15|valor_interno[0]                         ; Lost fanout                                 ;
-; reg_acoplo_4:inst107|seldirw[0]                             ; Lost fanout                                 ;
-; reg_acoplo_3:inst16|seldirw[0]                              ; Lost fanout                                 ;
-; reg_acoplo_4:inst107|seldirw[1]                             ; Lost fanout                                 ;
-; reg_acoplo_3:inst16|seldirw[1]                              ; Lost fanout                                 ;
-; registro_pc:inst6|valor_interno[0..15]                      ; Lost fanout                                 ;
-; registro_inst:inst8|valor_interno[0..15]                    ; Lost fanout                                 ;
-; registro_pc:inst24|valor_interno[0..15]                     ; Stuck at GND due to stuck port clock_enable ;
-; reg_acoplo_3:inst16|selop[0,1,3]                            ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|selresult[1]                            ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|cadj                                    ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|selfalgs[1..3]                          ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|selbranch[0..2]                         ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|vf                                      ; Stuck at VCC due to stuck port data_in      ;
-; reg_acoplo_3:inst16|selregw[0,1]                            ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|memw                                    ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_3:inst16|selresult[0]                            ; Lost fanout                                 ;
-; registros:inst700666|registro_esp:SP|valor_interno[0..15]   ; Stuck at GND due to stuck port data_in      ;
-; registros:inst700666|registro_esp:IY|valor_interno[0..15]   ; Stuck at GND due to stuck port data_in      ;
-; registros:inst700666|registro_esp:IX|valor_interno[0..15]   ; Stuck at GND due to stuck port data_in      ;
-; registros:inst700666|registro_esp:AUX|valor_interno[0..15]  ; Stuck at GND due to stuck port data_in      ;
-; registros:inst700666|registro_esp:ACCB|valor_interno[0..15] ; Stuck at GND due to stuck port data_in      ;
-; registros:inst700666|registro_esp:ACCA|valor_interno[0..15] ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_4:inst107|selregw[2]                             ; Lost fanout                                 ;
-; reg_acoplo_3:inst16|selregw[2]                              ; Lost fanout                                 ;
-; reg_acoplo_4:inst107|selregw[0,1]                           ; Lost fanout                                 ;
-; registro_1:inst100|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; reg_acoplo_4:inst107|memw                                   ; Stuck at GND due to stuck port data_in      ;
-; ccr:inst|vi                                                 ; Stuck at GND due to stuck port data_in      ;
-; registro_1:inst103|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; ccr:inst|hi                                                 ; Merged with ccr:inst|ii                     ;
-; ccr:inst|ci                                                 ; Merged with ccr:inst|ii                     ;
-; reg_acoplo_3:inst16|selfalgs[0]                             ; Merged with reg_acoplo_3:inst16|selc        ;
-; reg_acoplo_3:inst16|selop[2]                                ; Merged with reg_acoplo_3:inst16|selc        ;
-; ccr:inst|ii                                                 ; Stuck at GND due to stuck port data_in      ;
-; registro_1:inst106|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; registro_1:inst105|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; registro_1:inst104|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; ccr:inst|ni                                                 ; Stuck at GND due to stuck port data_in      ;
-; registro_1:inst101|valor_interno                            ; Stuck at GND due to stuck port data_in      ;
-; registro_pc2:inst34|valor_interno[6..15]                    ; Lost fanout                                 ;
-; Total Number of Removed Registers = 272                     ;                                             ;
-+-------------------------------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; upa:inst33|opres[15]                                ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[1]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[2]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[3]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[4]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[5]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[6]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[7]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[8]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[9]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[10]                                ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[11]                                ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[12]                                ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[13]                                ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[14]                                ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[0]                                 ; upa:inst33|opres[15] ; yes                    ;
+; upa:inst33|opres[16]                                ; upa:inst33|opres[15] ; yes                    ;
+; Number of user-specified and inferred latches = 17  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                             ;
-+--------------------------------------+--------------------------------+---------------------------------------------------------------------------------+
-; Register name                        ; Reason for Removal             ; Registers Removed due to This Register                                          ;
-+--------------------------------------+--------------------------------+---------------------------------------------------------------------------------+
-; registro_pc:inst14|valor_interno[15] ; Stuck at GND                   ; memoria_datos:inst41|datos[15], registro_pc:inst6|valor_interno[15],            ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[15], registro_pc:inst24|valor_interno[14],     ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[14],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[15],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[14],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[15],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[14],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[15],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[14],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[15],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[14],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[15],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[14],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[15]                        ;
-; registro_pc:inst14|valor_interno[0]  ; Stuck at GND                   ; memoria_datos:inst41|datos[0], registro_pc:inst6|valor_interno[0],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[0],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[0],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[0],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[0],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[0],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[0],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[0],                        ;
-;                                      ;                                ; reg_acoplo_4:inst107|selregw[2], reg_acoplo_3:inst16|selregw[2],                ;
-;                                      ;                                ; reg_acoplo_4:inst107|selregw[1], reg_acoplo_4:inst107|selregw[0]                ;
-; registro_pc:inst14|valor_interno[12] ; Stuck at GND                   ; memoria_datos:inst41|datos[12], registro_pc:inst6|valor_interno[12],            ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[12], reg_acoplo_3:inst16|selresult[0],         ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[12],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[12],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[12],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[12],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[12],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[12]                        ;
-; registro_pc:inst14|valor_interno[11] ; Stuck at GND                   ; memoria_datos:inst41|datos[11], registro_pc:inst6|valor_interno[11],            ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[11],                                           ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[11],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[11],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[11],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[11],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[11],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[11]                        ;
-; registro_pc:inst14|valor_interno[10] ; Stuck at GND                   ; memoria_datos:inst41|datos[10], registro_pc:inst6|valor_interno[10],            ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[10],                                           ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[10],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[10],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[10],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[10],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[10],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[10]                        ;
-; registro_pc:inst14|valor_interno[9]  ; Stuck at GND                   ; memoria_datos:inst41|datos[9], registro_pc:inst6|valor_interno[9],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[9],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[9],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[9],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[9],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[9],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[9],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[9]                         ;
-; registro_pc:inst14|valor_interno[8]  ; Stuck at GND                   ; memoria_datos:inst41|datos[8], registro_pc:inst6|valor_interno[8],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[8],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[8],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[8],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[8],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[8],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[8],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[8]                         ;
-; registro_pc:inst14|valor_interno[7]  ; Stuck at GND                   ; memoria_datos:inst41|datos[7], registro_pc:inst6|valor_interno[7],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[7],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[7],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[7],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[7],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[7],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[7],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[7]                         ;
-; registro_pc:inst14|valor_interno[6]  ; Stuck at GND                   ; memoria_datos:inst41|datos[6], registro_pc:inst6|valor_interno[6],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[6],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[6],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[6],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[6],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[6],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[6],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[6]                         ;
-; registro_pc:inst14|valor_interno[5]  ; Stuck at GND                   ; memoria_datos:inst41|datos[5], registro_pc:inst6|valor_interno[5],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[5],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[5],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[5],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[5],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[5],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[5],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[5]                         ;
-; registro_pc:inst14|valor_interno[4]  ; Stuck at GND                   ; memoria_datos:inst41|datos[4], registro_pc:inst6|valor_interno[4],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[4],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[4],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[4],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[4],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[4],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[4],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[4]                         ;
-; registro_pc:inst14|valor_interno[3]  ; Stuck at GND                   ; memoria_datos:inst41|datos[3], registro_pc:inst6|valor_interno[3],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[3],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[3],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[3],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[3],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[3],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[3],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[3]                         ;
-; registro_pc:inst14|valor_interno[2]  ; Stuck at GND                   ; memoria_datos:inst41|datos[2], registro_pc:inst6|valor_interno[2],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[2],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[2],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[2],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[2],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[2],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[2],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[2]                         ;
-; registro_pc:inst14|valor_interno[1]  ; Stuck at GND                   ; memoria_datos:inst41|datos[1], registro_pc:inst6|valor_interno[1],              ;
-;                                      ; due to stuck port clock_enable ; registro_pc:inst24|valor_interno[1],                                            ;
-;                                      ;                                ; registros:inst700666|registro_esp:SP|valor_interno[1],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IY|valor_interno[1],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[1],                          ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[1],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[1],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[1]                         ;
-; reg_acoplo_3:inst16|selfalgs[3]      ; Stuck at GND                   ; ccr:inst|vi, registro_1:inst103|valor_interno, ccr:inst|ii,                     ;
-;                                      ; due to stuck port data_in      ; registro_1:inst106|valor_interno, registro_1:inst105|valor_interno,             ;
-;                                      ;                                ; registro_1:inst104|valor_interno, ccr:inst|ni, registro_1:inst101|valor_interno ;
-; registro_pc:inst23|valor_interno[15] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[15], reg_acoplo_4:inst107|seldirw[0],          ;
-;                                      ; due to stuck port clock_enable ; reg_acoplo_3:inst16|seldirw[0], reg_acoplo_4:inst107|seldirw[1],                ;
-;                                      ;                                ; reg_acoplo_3:inst16|seldirw[1], registro_inst:inst8|valor_interno[15]           ;
-; registro_pc:inst24|valor_interno[13] ; Stuck at GND                   ; registros:inst700666|registro_esp:SP|valor_interno[13],                         ;
-;                                      ; due to stuck port clock_enable ; registros:inst700666|registro_esp:IY|valor_interno[13],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:IX|valor_interno[13],                         ;
-;                                      ;                                ; registros:inst700666|registro_esp:AUX|valor_interno[13],                        ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCB|valor_interno[13],                       ;
-;                                      ;                                ; registros:inst700666|registro_esp:ACCA|valor_interno[13]                        ;
-; registro_pc:inst23|valor_interno[14] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[14], registro_inst:inst8|valor_interno[14]     ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[13] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[13], registro_inst:inst8|valor_interno[13]     ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[12] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[12], registro_inst:inst8|valor_interno[12]     ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[11] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[11], registro_inst:inst8|valor_interno[11]     ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[10] ; Stuck at GND                   ; registro_pc:inst15|valor_interno[10], registro_inst:inst8|valor_interno[10]     ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[9]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[9], registro_inst:inst8|valor_interno[9]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[8]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[8], registro_inst:inst8|valor_interno[8]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[7]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[7], registro_inst:inst8|valor_interno[7]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[6]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[6], registro_inst:inst8|valor_interno[6]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[5]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[5], registro_inst:inst8|valor_interno[5]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[4]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[4], registro_inst:inst8|valor_interno[4]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[3]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[3], registro_inst:inst8|valor_interno[3]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[2]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[2], registro_inst:inst8|valor_interno[2]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[1]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[1], registro_inst:inst8|valor_interno[1]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst23|valor_interno[0]  ; Stuck at GND                   ; registro_pc:inst15|valor_interno[0], registro_inst:inst8|valor_interno[0]       ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst14|valor_interno[14] ; Stuck at GND                   ; memoria_datos:inst41|datos[14], registro_pc:inst6|valor_interno[14]             ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; registro_pc:inst14|valor_interno[13] ; Stuck at GND                   ; memoria_datos:inst41|datos[13], registro_pc:inst6|valor_interno[13]             ;
-;                                      ; due to stuck port clock_enable ;                                                                                 ;
-; reg_acoplo_3:inst16|selbranch[2]     ; Stuck at GND                   ; registro_1:inst100|valor_interno                                                ;
-;                                      ; due to stuck port data_in      ;                                                                                 ;
-; reg_acoplo_3:inst16|memw             ; Stuck at GND                   ; reg_acoplo_4:inst107|memw                                                       ;
-;                                      ; due to stuck port data_in      ;                                                                                 ;
-+--------------------------------------+--------------------------------+---------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++-----------------------------------------------------------+---------------------------------------------+
+; Register name                                             ; Reason for Removal                          ;
++-----------------------------------------------------------+---------------------------------------------+
+; reg_acoplo_3:inst16|selop[1,3]                            ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|selresult[1]                          ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|cadj                                  ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|selfalgs[2,3]                         ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|selbranch[0..2]                       ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|vf                                    ; Stuck at VCC due to stuck port data_in      ;
+; reg_acoplo_3:inst16|selregw[1]                            ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|memw                                  ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_3:inst16|seldirw[0,1]                          ; Stuck at GND due to stuck port data_in      ;
+; registro_pc:inst6|valor_interno[0..15]                    ; Lost fanout                                 ;
+; registro_1:inst100|valor_interno                          ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_4:inst107|selregw[1]                           ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_4:inst107|memw                                 ; Stuck at GND due to stuck port data_in      ;
+; reg_acoplo_4:inst107|seldirw[0,1]                         ; Stuck at GND due to stuck port data_in      ;
+; memoria_datos:inst41|datos[0..15]                         ; Stuck at GND due to stuck port data_in      ;
+; registro_pc:inst23|valor_interno[0]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[0]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[15]                      ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[15]                      ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[14]                      ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[14]                      ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[13]                      ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[13]                      ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[12]                      ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[12]                      ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[11]                      ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[11]                      ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[10]                      ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[10]                      ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[9]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[9]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[8]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[8]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[7]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[7]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[6]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[6]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[5]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[5]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[4]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[4]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[3]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[3]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[2]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[2]                       ; Lost fanout                                 ;
+; registro_pc:inst23|valor_interno[1]                       ; Lost fanout                                 ;
+; registro_pc:inst15|valor_interno[1]                       ; Lost fanout                                 ;
+; registros:inst700666|registro_esp:SP|valor_interno[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; registros:inst700666|registro_esp:IY|valor_interno[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; registros:inst700666|registro_esp:IX|valor_interno[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; reg_acoplo_3:inst16|selop[0]                              ; Merged with reg_acoplo_3:inst16|selfalgs[1] ;
+; reg_acoplo_3:inst16|selop[2]                              ; Merged with reg_acoplo_3:inst16|selfalgs[0] ;
+; reg_acoplo_3:inst16|selresult[0]                          ; Merged with reg_acoplo_3:inst16|selc        ;
+; ccr:inst|ii                                               ; Stuck at GND due to stuck port data_in      ;
+; registro_1:inst106|valor_interno                          ; Stuck at GND due to stuck port data_in      ;
+; registro_pc2:inst34|valor_interno[6..15]                  ; Lost fanout                                 ;
+; Total Number of Removed Registers = 146                   ;                                             ;
++-----------------------------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++----------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++----------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; reg_acoplo_3:inst16|selregw[1]   ; Stuck at GND              ; reg_acoplo_4:inst107|selregw[1],                                            ;
+;                                  ; due to stuck port data_in ; registros:inst700666|registro_esp:SP|valor_interno[0],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[1],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[2],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[3],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[4],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[5],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[6],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[7],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[8],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[9],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[10],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[11],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[12],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[13],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[14],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:SP|valor_interno[15],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[0],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[1],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[2],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[3],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[4],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[5],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[6],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[7],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[8],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[9],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[10],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[11],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[12],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[13],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[14],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IY|valor_interno[15],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[0],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[1],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[2],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[3],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[4],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[5],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[6],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[7],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[8],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[9],                      ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[10],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[11],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[12],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[13],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[14],                     ;
+;                                  ;                           ; registros:inst700666|registro_esp:IX|valor_interno[15]                      ;
+; reg_acoplo_3:inst16|memw         ; Stuck at GND              ; reg_acoplo_4:inst107|memw, memoria_datos:inst41|datos[1],                   ;
+;                                  ; due to stuck port data_in ; memoria_datos:inst41|datos[0], memoria_datos:inst41|datos[2],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[3], memoria_datos:inst41|datos[4],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[5], memoria_datos:inst41|datos[6],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[7], memoria_datos:inst41|datos[8],               ;
+;                                  ;                           ; memoria_datos:inst41|datos[9], memoria_datos:inst41|datos[10],              ;
+;                                  ;                           ; memoria_datos:inst41|datos[11], memoria_datos:inst41|datos[12],             ;
+;                                  ;                           ; memoria_datos:inst41|datos[13], memoria_datos:inst41|datos[14],             ;
+;                                  ;                           ; memoria_datos:inst41|datos[15]                                              ;
+; reg_acoplo_3:inst16|seldirw[1]   ; Stuck at GND              ; reg_acoplo_4:inst107|seldirw[1], registro_pc:inst23|valor_interno[0],       ;
+;                                  ; due to stuck port data_in ; registro_pc:inst23|valor_interno[15], registro_pc:inst23|valor_interno[14], ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[13], registro_pc:inst23|valor_interno[12], ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[11], registro_pc:inst23|valor_interno[10], ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[9], registro_pc:inst23|valor_interno[8],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[7], registro_pc:inst23|valor_interno[6],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[5], registro_pc:inst23|valor_interno[4],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[3], registro_pc:inst23|valor_interno[2],   ;
+;                                  ;                           ; registro_pc:inst23|valor_interno[1]                                         ;
+; reg_acoplo_3:inst16|selresult[1] ; Stuck at GND              ; registro_pc:inst15|valor_interno[0], registro_pc:inst15|valor_interno[15],  ;
+;                                  ; due to stuck port data_in ; registro_pc:inst15|valor_interno[14], registro_pc:inst15|valor_interno[13], ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[12], registro_pc:inst15|valor_interno[11], ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[10], registro_pc:inst15|valor_interno[9],  ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[8], registro_pc:inst15|valor_interno[7],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[6], registro_pc:inst15|valor_interno[5],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[4], registro_pc:inst15|valor_interno[3],   ;
+;                                  ;                           ; registro_pc:inst15|valor_interno[2], registro_pc:inst15|valor_interno[1]    ;
+; reg_acoplo_3:inst16|selfalgs[3]  ; Stuck at GND              ; ccr:inst|ii, registro_1:inst106|valor_interno                               ;
+;                                  ; due to stuck port data_in ;                                                                             ;
+; reg_acoplo_3:inst16|selbranch[2] ; Stuck at GND              ; registro_1:inst100|valor_interno                                            ;
+;                                  ; due to stuck port data_in ;                                                                             ;
+; reg_acoplo_3:inst16|seldirw[0]   ; Stuck at GND              ; reg_acoplo_4:inst107|seldirw[0]                                             ;
+;                                  ; due to stuck port data_in ;                                                                             ;
++----------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -586,23 +501,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
+; Total registers                              ; 120   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 115   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 52    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                    ;
-+-------------------------------------------+------------------------------+------+
-; Register Name                             ; Megafunction                 ; Type ;
-+-------------------------------------------+------------------------------+------+
-; registro_inst:inst8|valor_interno[16..31] ; memoria_inst:inst1|mem_rtl_0 ; RAM  ;
-+-------------------------------------------+------------------------------+------+
++--------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                   ;
++------------------------------------------+------------------------------+------+
+; Register Name                            ; Megafunction                 ; Type ;
++------------------------------------------+------------------------------+------+
+; registro_inst:inst8|valor_interno[0..31] ; memoria_inst:inst1|mem_rtl_0 ; RAM  ;
++------------------------------------------+------------------------------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pipeline|registro_pc:inst700|valor_interno[5] ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |pipeline|registro_pc:inst14|valor_interno[6]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |pipeline|upa:inst33|opres[9]                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -771,22 +697,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 104                         ;
-; cycloneiii_ff         ; 10                          ;
-;     CLR               ; 9                           ;
+; cycloneiii_ff         ; 120                         ;
+;     CLR               ; 67                          ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 48                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 14                          ;
-;     arith             ; 4                           ;
+; cycloneiii_lcell_comb ; 195                         ;
+;     arith             ; 21                          ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 10                          ;
-;         0 data inputs ; 1                           ;
+;         3 data inputs ; 18                          ;
+;     normal            ; 174                         ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         4 data inputs ; 5                           ;
-; cycloneiii_ram_block  ; 16                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 117                         ;
+; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.70                        ;
+; Max LUT depth         ; 10.30                       ;
+; Average LUT depth     ; 4.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -795,7 +724,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -805,7 +734,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun 02 00:52:00 2022
+    Info: Processing started: Thu Jun 02 13:07:46 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -935,7 +864,7 @@ Info (12128): Elaborating entity "reg_acoplo_3" for hierarchy "reg_acoplo_3:inst
 Info (12128): Elaborating entity "mux_detencion" for hierarchy "mux_detencion:inst9"
 Info (12128): Elaborating entity "u_detencion" for hierarchy "u_detencion:inst5"
 Info (12128): Elaborating entity "reg_acoplo_4" for hierarchy "reg_acoplo_4:inst107"
-Info (12128): Elaborating entity "u_control" for hierarchy "u_control:inst206"
+Info (12128): Elaborating entity "u_control" for hierarchy "u_control:inst19"
 Info (12128): Elaborating entity "registro_inst" for hierarchy "registro_inst:inst8"
 Info (12128): Elaborating entity "memoria_inst" for hierarchy "memoria_inst:inst1"
 Warning (10541): VHDL Signal Declaration warning at memoria_inst.vhd(16): used implicit default value for signal "mem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/memoria_inst.vhd Line: 16
@@ -964,7 +893,7 @@ Info (12130): Elaborated megafunction instantiation "BUSMUX:inst39"
 Info (12133): Instantiated megafunction "BUSMUX:inst39" with the following parameter:
     Info (12134): Parameter "WIDTH" = "16"
 Info (12128): Elaborating entity "mux_dirw" for hierarchy "mux_dirw:inst17"
-Info (12128): Elaborating entity "u_anticipacion" for hierarchy "u_anticipacion:inst2"
+Info (12128): Elaborating entity "u_anticipacion" for hierarchy "u_anticipacion:inst12"
 Info (12128): Elaborating entity "mux_src" for hierarchy "mux_src:inst202"
 Info (12128): Elaborating entity "memoria_datos" for hierarchy "memoria_datos:inst41"
 Info (12128): Elaborating entity "ext_signo" for hierarchy "ext_signo:inst18"
@@ -994,78 +923,42 @@ Info (12133): Instantiated megafunction "memoria_inst:inst1|altsyncram:mem_rtl_0
     Info (12134): Parameter "INIT_FILE" = "mem_prog.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pi41.tdf
     Info (12023): Found entity 1: altsyncram_pi41 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 27
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a0" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 34
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a1" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 55
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a2" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 76
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a3" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 97
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a4" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 118
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a5" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 139
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a6" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 160
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a7" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 181
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a8" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 202
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a9" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 223
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a10" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 244
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a11" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 265
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a12" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 286
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a13" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 307
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a14" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 328
-        Warning (14320): Synthesized away node "memoria_inst:inst1|altsyncram:mem_rtl_0|altsyncram_pi41:auto_generated|ram_block1a15" File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/db/altsyncram_pi41.tdf Line: 349
+Warning (13012): Latch upa:inst33|opres[15] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[1] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[2] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[3] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[4] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[5] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[6] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[7] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[8] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[9] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[10] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[11] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[12] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[13] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[14] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[0] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[16] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[0] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/reg_acoplo_3.vhd Line: 46
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "n" is stuck at GND
-    Warning (13410): Pin "v" is stuck at GND
-    Warning (13410): Pin "c" is stuck at GND
-    Warning (13410): Pin "h" is stuck at GND
     Warning (13410): Pin "i" is stuck at GND
-    Warning (13410): Pin "ACCA_D[15]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[14]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[13]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[12]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[11]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[10]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[9]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[8]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[7]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[6]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[5]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[4]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[3]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[2]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[1]" is stuck at GND
-    Warning (13410): Pin "ACCA_D[0]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[15]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[14]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[13]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[12]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[11]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[10]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[9]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[8]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[7]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[6]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[5]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[4]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[3]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[2]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[1]" is stuck at GND
-    Warning (13410): Pin "ACCB_D[0]" is stuck at GND
-    Warning (13410): Pin "AUX_D[15]" is stuck at GND
-    Warning (13410): Pin "AUX_D[14]" is stuck at GND
-    Warning (13410): Pin "AUX_D[13]" is stuck at GND
-    Warning (13410): Pin "AUX_D[12]" is stuck at GND
-    Warning (13410): Pin "AUX_D[11]" is stuck at GND
-    Warning (13410): Pin "AUX_D[10]" is stuck at GND
-    Warning (13410): Pin "AUX_D[9]" is stuck at GND
-    Warning (13410): Pin "AUX_D[8]" is stuck at GND
-    Warning (13410): Pin "AUX_D[7]" is stuck at GND
-    Warning (13410): Pin "AUX_D[6]" is stuck at GND
-    Warning (13410): Pin "AUX_D[5]" is stuck at GND
-    Warning (13410): Pin "AUX_D[4]" is stuck at GND
-    Warning (13410): Pin "AUX_D[3]" is stuck at GND
-    Warning (13410): Pin "AUX_D[2]" is stuck at GND
-    Warning (13410): Pin "AUX_D[1]" is stuck at GND
-    Warning (13410): Pin "AUX_D[0]" is stuck at GND
     Warning (13410): Pin "IX_D[15]" is stuck at GND
     Warning (13410): Pin "IX_D[14]" is stuck at GND
     Warning (13410): Pin "IX_D[13]" is stuck at GND
@@ -1115,18 +1008,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SP_D[1]" is stuck at GND
     Warning (13410): Pin "SP_D[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 83 registers lost all their fanouts during netlist optimizations.
+Info (17049): 58 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 135 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 407 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 102 output pins
-    Info (21061): Implemented 15 logic cells
-    Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Thu Jun 02 00:52:10 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 271 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 87 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Thu Jun 02 13:07:59 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 

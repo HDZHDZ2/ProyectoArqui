@@ -19,9 +19,7 @@ begin
 		if RESET = '0' then 
 			valor_interno <= zero;
 		elsif falling_edge (RELOJ) then
-			if SEL= '1' then
-				valor_interno <= ENTRADA;
-			end if;
+			valor_interno <= ENTRADA;
 		end if;
 	end process;
 	
