@@ -1,0 +1,18 @@
+Fitter Status : Successful - Fri Jun 03 13:16:28 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : pipeline
+Top-level Entity Name : pipeline
+Family : MAX 10
+Device : 10M08DAF484C8G
+Timing Models : Final
+Total logic elements : 256 / 8,064 ( 3 % )
+    Total combinational functions : 201 / 8,064 ( 2 % )
+    Dedicated logic registers : 132 / 8,064 ( 2 % )
+Total registers : 132
+Total pins : 104 / 250 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 0 / 387,072 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 48 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )
