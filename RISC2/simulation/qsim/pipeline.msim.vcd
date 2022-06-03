@@ -3,7 +3,7 @@ $comment
 		vcd file pipeline.msim.vcd -direction
 $end
 $date
-	Thu Jun 02 16:38:51 2022
+	Thu Jun 02 20:54:13 2022
 $end
 $version
 	ModelSim Version 10.5b
