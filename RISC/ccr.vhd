@@ -29,8 +29,7 @@ signal ii : std_logic := '0';
 begin
 	process (RELOJ,selflags, nupa,zupa,vupa,cupa,hupa, ni, zi, vi, ci, hi, ii)
 	begin
-		if(falling_edge(RELOJ)) then
-			
+		if (falling_edge (RELOJ)) then
 			if selflags = "0000" then
 				ni <= ni;
 				zi <= zi;
@@ -85,22 +84,22 @@ begin
 				ii <= ii;
 			end if;
 		else
-				ni <= ni;
-				zi <= zi;
-				vi <= vi;
-				ci <= ci;
-				hi <= hi;
-				ii <= ii;		
-		end if;	
-		end process;
-		
-		process (ni,zi,vi,ci,hi,ii)
-		begin
-			n <= ni;
-			z <= zi;
-			v <= vi;
-			c <= ci;
-			h <= hi;
-			i <= ii;  
-		end process;
+			ni <= ni;
+			zi <= zi;
+			vi <= vi;
+			ci <= ci;
+			hi <= hi;
+			ii <= ii;
+		end if;
+	end process;
+	
+	process (ni,zi,vi,ci,hi,ii)
+	begin
+		n <= ni;
+		z <= zi;
+		v <= vi;
+		c <= ci;
+		h <= hi;
+		i <= ii;  
+	end process;
 end Behavioral;

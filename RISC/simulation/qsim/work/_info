@@ -9,25 +9,25 @@ z2
 cModel Technology
 dC:/Users/alons/Documents/Escuela/Organización de Computadoras/RISC/RISC/simulation/qsim
 Ehard_block
-Z0 w1654193315
+Z0 w1654206018
 Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
 Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z6 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z6 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
 Z7 dC:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim
 Z8 8pipeline.vho
 Z9 Fpipeline.vho
 l0
 L34
-VOgIg9T_BR7joedFDVM>H13
-!s100 A`ID_i56<Ua56=ZD=[EG=2
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1654193316
+Z11 !s110 1654206019
 !i10b 1
-Z12 !s108 1654193316.000000
+Z12 !s108 1654206019.000000
 Z13 !s90 -work|work|pipeline.vho|
 Z14 !s107 pipeline.vho|
 !i113 1
@@ -40,11 +40,11 @@ R3
 R4
 R5
 R6
-DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
-l64
-L50
-V`^CmQg<48W[ez[JL_5@Yn2
-!s100 2S?JL;LJ@<3:BHXTNcXS]3
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
 R10
 32
 R11
@@ -69,9 +69,9 @@ R7
 R8
 R9
 l0
-L79
-VbGRAFVT1=kT;OmS_C?;2e3
-!s100 Ib3PO?3W<:H58Pi:;N2f`3
+L90
+VIe<VBU?KQFYY7hNU1>L_o2
+!s100 ]lcHOh3TNNm6VeSf9>`bm0
 R10
 32
 R11
@@ -91,11 +91,11 @@ R3
 R4
 R5
 R18
-DEx4 work 8 pipeline 0 22 bGRAFVT1=kT;OmS_C?;2e3
-l648
-L205
-VEj08]^W9gl<6jP@RbdJ8L2
-!s100 B[2X3WA79<4JQ1aDQG[C90
+DEx4 work 8 pipeline 0 22 Ie<VBU?KQFYY7hNU1>L_o2
+l609
+L216
+VOQjjb?ZYmgDiFIOcNl3cE3
+!s100 =m9<LIao@63@UcLGfJmg73
 R10
 32
 R11
@@ -107,7 +107,7 @@ R14
 R15
 R16
 Epipeline_vhd_vec_tst
-Z19 w1654193314
+Z19 w1654206017
 R4
 R5
 R7

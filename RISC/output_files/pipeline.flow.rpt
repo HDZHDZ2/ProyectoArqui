@@ -1,5 +1,5 @@
 Flow report for pipeline
-Thu Jun 02 13:08:35 2022
+Thu Jun 02 16:40:18 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,22 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 02 13:08:35 2022       ;
+; Flow Status                        ; Successful - Thu Jun 02 16:40:18 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pipeline                                    ;
 ; Top-level Entity Name              ; pipeline                                    ;
-; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE22F17C6                                ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M08DAF484C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 242 / 22,320 ( 1 % )                        ;
-;     Total combinational functions  ; 195 / 22,320 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 120 / 22,320 ( < 1 % )                      ;
-; Total registers                    ; 120                                         ;
-; Total pins                         ; 104 / 154 ( 68 % )                          ;
+; Total logic elements               ; 234 / 8,064 ( 3 % )                         ;
+;     Total combinational functions  ; 189 / 8,064 ( 2 % )                         ;
+;     Dedicated logic registers      ; 129 / 8,064 ( 2 % )                         ;
+; Total registers                    ; 129                                         ;
+; Total pins                         ; 104 / 250 ( 42 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,632 / 608,256 ( < 1 % )                   ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/02/2022 13:07:47 ;
+; Start date & time ; 06/02/2022 16:23:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pipeline            ;
 +-------------------+---------------------+
@@ -75,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 39908817242782.165419326710452         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 39908817242782.165420502206468         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -93,14 +95,20 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4867 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:11     ; 1.1                     ; 6117 MB             ; 00:00:17                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4859 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:11     ; 1.2                     ; 6114 MB             ; 00:00:14                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4672 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4874 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4625 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:49                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.3                     ; 4882 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4644 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4631 MB             ; 00:00:01                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:46                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,6 +124,12 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-2B9ELV6  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -127,6 +141,12 @@ quartus_fit --read_settings_files=off --write_settings_files=off pipeline -c pip
 quartus_asm --read_settings_files=off --write_settings_files=off pipeline -c pipeline
 quartus_sta pipeline -c pipeline
 quartus_eda --read_settings_files=off --write_settings_files=off pipeline -c pipeline
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off pipeline -c pipeline --vector_source="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/Waveform1.vwf" --testbench_file="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/" pipeline -c pipeline
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off pipeline -c pipeline --vector_source="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/Waveform1.vwf" --testbench_file="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/" pipeline -c pipeline
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off pipeline -c pipeline --vector_source="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/Waveform1.vwf" --testbench_file="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/" pipeline -c pipeline
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off pipeline -c pipeline --vector_source="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/Waveform1.vwf" --testbench_file="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/Waveform1.vwf.vht"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC/simulation/qsim/" pipeline -c pipeline
 

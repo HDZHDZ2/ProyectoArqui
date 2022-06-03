@@ -18,14 +18,40 @@ architecture Behavioral of memoria_datos is
 	signal mem : memory;
 		
 	begin
-		process (memW, clk, datoW, mem) 
-			begin
-				if (falling_edge(clk)) then		
-					if (memW = '1') then
-						mem(conv_integer(unsigned(direccion))) <= datoW;
-					else 
-						datos <= mem(conv_integer(unsigned(direccion)));
-					end if;
-				end if;
+		-- Las direcciones las indicamos en decimal
+		
+		-- Llenamos la memoria CARTA A
+		--memoria(0) <= "000000000010" & "01" & "01" & '1' & "11000";
+		--memoria(1) <= "000000000011" & "01" & "11" & '1' & "01001";
+		--memoria(2) <= "000000000100" & "01" & "00" & '1' & "00100";
+		--memoria(3) <= "000000000001" & "01" & "10" & '0' & "00110";
+		--memoria(4) <= "000000000000" & "01" & "11" & '1' & "01010";
+		
+		MEM_WRITE: process(direccion, memW, datoW)
+		begin
+			mem(0) <= "0000000100000010";
+			
+			if memW = '1' then
+				mem(conv_integer(unsigned(direccion))) <= datoW;
+			end if;
 		end process;
+		
+		
+		MEM_READ: process(memW, direccion)
+		begin
+			if memW = '0' then
+				datos <= mem(conv_integer(unsigned(direccion)));
+			end if;
+		end process;
+	
+		-- Funcion de la memoria
+		--process(direccion, datoW, memW)
+		--begin
+			--if memW = '0' then
+				--datos <= memoria(conv_integer(unsigned(direccion)));
+			--else
+				--memoria(conv_integer(unsigned(direccion))) <= datoW;
+			--end if;
+		--end process;
 end Behavioral;
+
