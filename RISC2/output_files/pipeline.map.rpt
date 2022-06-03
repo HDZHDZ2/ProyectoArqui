@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipeline
-Thu Jun 02 17:16:07 2022
+Thu Jun 02 21:45:01 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -30,21 +30,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: BUSMUX:inst39
  23. Parameter Settings for User Entity Instance: BUSMUX:inst43
  24. Parameter Settings for User Entity Instance: BUSMUX:inst36
- 25. Parameter Settings for User Entity Instance: BUSMUX:inst42
- 26. Parameter Settings for User Entity Instance: BUSMUX:inst37
- 27. Parameter Settings for User Entity Instance: BUSMUX:inst32
- 28. Parameter Settings for User Entity Instance: BUSMUX:inst28
- 29. Parameter Settings for User Entity Instance: BUSMUX:inst25
- 30. Parameter Settings for User Entity Instance: BUSMUX:inst19
- 31. Parameter Settings for User Entity Instance: BUSMUX:inst26
- 32. Parameter Settings for User Entity Instance: BUSMUX:inst12
- 33. Parameter Settings for User Entity Instance: BUSMUX:inst29
- 34. Parameter Settings for User Entity Instance: BUSMUX:inst31
- 35. Parameter Settings for User Entity Instance: BUSMUX:inst21
- 36. Parameter Settings for User Entity Instance: BUSMUX:inst30
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 25. Parameter Settings for User Entity Instance: BUSMUX:inst51
+ 26. Parameter Settings for User Entity Instance: BUSMUX:inst42
+ 27. Parameter Settings for User Entity Instance: BUSMUX:inst37
+ 28. Parameter Settings for User Entity Instance: BUSMUX:inst32
+ 29. Parameter Settings for User Entity Instance: BUSMUX:inst50
+ 30. Parameter Settings for User Entity Instance: BUSMUX:inst28
+ 31. Parameter Settings for User Entity Instance: BUSMUX:inst25
+ 32. Parameter Settings for User Entity Instance: BUSMUX:inst19
+ 33. Parameter Settings for User Entity Instance: BUSMUX:inst26
+ 34. Parameter Settings for User Entity Instance: BUSMUX:inst12
+ 35. Parameter Settings for User Entity Instance: BUSMUX:inst29
+ 36. Parameter Settings for User Entity Instance: BUSMUX:inst31
+ 37. Parameter Settings for User Entity Instance: BUSMUX:inst21
+ 38. Parameter Settings for User Entity Instance: BUSMUX:inst30
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -70,13 +72,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 02 17:16:07 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 21:45:01 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; pipeline                                    ;
 ; Top-level Entity Name              ; pipeline                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 236                                         ;
-;     Total combinational functions  ; 182                                         ;
+; Total logic elements               ; 254                                         ;
+;     Total combinational functions  ; 200                                         ;
 ;     Dedicated logic registers      ; 131                                         ;
 ; Total registers                    ; 131                                         ;
 ; Total pins                         ; 104                                         ;
@@ -193,49 +195,50 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; incrementador.vhdl               ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/incrementador.vhdl ;         ;
-; registro_pc.vhd                  ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_pc.vhd    ;         ;
-; memoria_inst.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_inst.vhd   ;         ;
-; pipeline.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/pipeline.bdf       ;         ;
-; registro_inst.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_inst.vhd  ;         ;
-; ext_signo.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/ext_signo.vhd      ;         ;
-; mux_dir.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_dir.vhd        ;         ;
-; sumador.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/sumador.vhd        ;         ;
-; memoria_datos.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_datos.vhd  ;         ;
-; mux_src.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_src.vhd        ;         ;
-; registros.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/registros.bdf      ;         ;
-; mux_regs.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_regs.vhd       ;         ;
-; deco_regw.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/deco_regw.vhd      ;         ;
-; u_control.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_control.vhd      ;         ;
-; reg_acoplo_3.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd   ;         ;
-; upa.vhd                          ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd            ;         ;
-; mux_result.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_result.vhd     ;         ;
-; ccr.vhd                          ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd            ;         ;
-; branch.vhd                       ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/branch.vhd         ;         ;
-; registro_1.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_1.vhd     ;         ;
-; reg_acoplo_4.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_4.vhd   ;         ;
-; mux_dirw.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_dirw.vhd       ;         ;
-; registro_esp.vhdl                ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_esp.vhdl  ;         ;
-; registro_pc2.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_pc2.vhd   ;         ;
-; u_detenciones.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_detenciones.vhd  ;         ;
-; busmux.tdf                       ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/busmux.tdf              ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mux_t5c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_t5c.tdf     ;         ;
-; db/mux_j7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_j7c.tdf     ;         ;
-; db/mux_06c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_06c.tdf     ;         ;
-; db/mux_u5c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_u5c.tdf     ;         ;
-; db/mux_v5c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_v5c.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; incrementador.vhdl               ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/incrementador.vhdl ;         ;
+; registro_pc.vhd                  ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_pc.vhd    ;         ;
+; memoria_inst.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_inst.vhd   ;         ;
+; pipeline.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/pipeline.bdf       ;         ;
+; registro_inst.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_inst.vhd  ;         ;
+; ext_signo.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ext_signo.vhd      ;         ;
+; mux_dir.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_dir.vhd        ;         ;
+; sumador.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/sumador.vhd        ;         ;
+; memoria_datos.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_datos.vhd  ;         ;
+; mux_src.vhd                      ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_src.vhd        ;         ;
+; registros.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registros.bdf      ;         ;
+; mux_regs.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_regs.vhd       ;         ;
+; deco_regw.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/deco_regw.vhd      ;         ;
+; u_control.vhd                    ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_control.vhd      ;         ;
+; reg_acoplo_3.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd   ;         ;
+; upa.vhd                          ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd            ;         ;
+; mux_result.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_result.vhd     ;         ;
+; ccr.vhd                          ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd            ;         ;
+; branch.vhd                       ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/branch.vhd         ;         ;
+; registro_1.vhd                   ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_1.vhd     ;         ;
+; reg_acoplo_4.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_4.vhd   ;         ;
+; mux_dirw.vhd                     ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_dirw.vhd       ;         ;
+; registro_esp.vhdl                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_esp.vhdl  ;         ;
+; registro_pc2.vhd                 ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_pc2.vhd   ;         ;
+; u_detenciones.vhd                ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_detenciones.vhd  ;         ;
+; u_anticipacion.vhd               ; yes             ; User VHDL File                     ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_anticipacion.vhd ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/busmux.tdf                                           ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf                                          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/aglobal181.inc                                       ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/muxlut.inc                                           ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/bypassff.inc                                         ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; d:/quartus2/quartus/libraries/megafunctions/altshift.inc                                         ;         ;
+; db/mux_t5c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_t5c.tdf     ;         ;
+; db/mux_j7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_j7c.tdf     ;         ;
+; db/mux_06c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_06c.tdf     ;         ;
+; db/mux_u5c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_u5c.tdf     ;         ;
+; db/mux_v5c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_v5c.tdf     ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -243,16 +246,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 236         ;
+; Estimated Total logic elements              ; 254         ;
 ;                                             ;             ;
-; Total combinational functions               ; 182         ;
+; Total combinational functions               ; 200         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 92          ;
+;     -- 4 input functions                    ; 90          ;
 ;     -- 3 input functions                    ; 56          ;
-;     -- <=2 input functions                  ; 34          ;
+;     -- <=2 input functions                  ; 54          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 161         ;
+;     -- normal mode                          ; 179         ;
 ;     -- arithmetic mode                      ; 21          ;
 ;                                             ;             ;
 ; Total registers                             ; 131         ;
@@ -265,59 +268,65 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; RESET~input ;
 ; Maximum fan-out                             ; 131         ;
-; Total fan-out                               ; 1209        ;
-; Average fan-out                             ; 2.32        ;
+; Total fan-out                               ; 1241        ;
+; Average fan-out                             ; 2.30        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                             ; Entity Name   ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+---------------+--------------+
-; |pipeline                         ; 182 (2)             ; 131 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 104  ; 0            ; 0          ; |pipeline                                                       ; pipeline      ; work         ;
-;    |busmux:inst21|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst21                                         ; busmux        ; work         ;
-;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst21|lpm_mux:$00000                          ; lpm_mux       ; work         ;
-;          |mux_v5c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst21|lpm_mux:$00000|mux_v5c:auto_generated   ; mux_v5c       ; work         ;
-;    |busmux:inst29|                ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst29                                         ; busmux        ; work         ;
-;       |lpm_mux:$00000|            ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst29|lpm_mux:$00000                          ; lpm_mux       ; work         ;
-;          |mux_06c:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst29|lpm_mux:$00000|mux_06c:auto_generated   ; mux_06c       ; work         ;
-;    |busmux:inst31|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst31                                         ; busmux        ; work         ;
-;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst31|lpm_mux:$00000                          ; lpm_mux       ; work         ;
-;          |mux_06c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst31|lpm_mux:$00000|mux_06c:auto_generated   ; mux_06c       ; work         ;
-;    |busmux:inst32|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst32                                         ; busmux        ; work         ;
-;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst32|lpm_mux:$00000                          ; lpm_mux       ; work         ;
-;          |mux_v5c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst32|lpm_mux:$00000|mux_v5c:auto_generated   ; mux_v5c       ; work         ;
-;    |busmux:inst9999|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst9999                                       ; busmux        ; work         ;
-;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst9999|lpm_mux:$00000                        ; lpm_mux       ; work         ;
-;          |mux_j7c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst9999|lpm_mux:$00000|mux_j7c:auto_generated ; mux_j7c       ; work         ;
-;    |ccr:inst|                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|ccr:inst                                              ; ccr           ; work         ;
-;    |memoria_inst:inst1|           ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|memoria_inst:inst1                                    ; memoria_inst  ; work         ;
-;    |mux_result:inst20|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|mux_result:inst20                                     ; mux_result    ; work         ;
-;    |mux_src:inst202|              ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|mux_src:inst202                                       ; mux_src       ; work         ;
-;    |reg_acoplo_3:inst16|          ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|reg_acoplo_3:inst16                                   ; reg_acoplo_3  ; work         ;
-;    |reg_acoplo_4:inst107|         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|reg_acoplo_4:inst107                                  ; reg_acoplo_4  ; work         ;
-;    |registro_1:inst100|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst100                                    ; registro_1    ; work         ;
-;    |registro_1:inst101|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst101                                    ; registro_1    ; work         ;
-;    |registro_1:inst102|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst102                                    ; registro_1    ; work         ;
-;    |registro_1:inst103|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst103                                    ; registro_1    ; work         ;
-;    |registro_1:inst104|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst104                                    ; registro_1    ; work         ;
-;    |registro_1:inst105|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst105                                    ; registro_1    ; work         ;
-;    |registro_1:inst106|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst106                                    ; registro_1    ; work         ;
-;    |registro_inst:inst8|          ; 0 (0)               ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_inst:inst8                                   ; registro_inst ; work         ;
-;    |registro_pc2:inst34|          ; 5 (5)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc2:inst34                                   ; registro_pc2  ; work         ;
-;    |registro_pc:inst14|           ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc:inst14                                    ; registro_pc   ; work         ;
-;    |registro_pc:inst24|           ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc:inst24                                    ; registro_pc   ; work         ;
-;    |registro_pc:inst700|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc:inst700                                   ; registro_pc   ; work         ;
-;    |registros:inst700666|         ; 3 (0)               ; 48 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666                                  ; registros     ; work         ;
-;       |deco_regw:inst1000|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|deco_regw:inst1000               ; deco_regw     ; work         ;
-;       |registro_esp:ACCA|         ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|registro_esp:ACCA                ; registro_esp  ; work         ;
-;       |registro_esp:ACCB|         ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|registro_esp:ACCB                ; registro_esp  ; work         ;
-;       |registro_esp:AUX|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|registro_esp:AUX                 ; registro_esp  ; work         ;
-;    |u_control:inst4|              ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|u_control:inst4                                       ; u_control     ; work         ;
-;    |u_detenciones:inst49|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|u_detenciones:inst49                                  ; u_detenciones ; work         ;
-;    |upa:inst33|                   ; 75 (75)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|upa:inst33                                            ; upa           ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                             ; Entity Name    ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+----------------+--------------+
+; |pipeline                         ; 200 (2)             ; 131 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 104  ; 0            ; 0          ; |pipeline                                                       ; pipeline       ; work         ;
+;    |busmux:inst21|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst21                                         ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst21|lpm_mux:$00000                          ; lpm_mux        ; work         ;
+;          |mux_v5c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst21|lpm_mux:$00000|mux_v5c:auto_generated   ; mux_v5c        ; work         ;
+;    |busmux:inst29|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst29                                         ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst29|lpm_mux:$00000                          ; lpm_mux        ; work         ;
+;          |mux_06c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst29|lpm_mux:$00000|mux_06c:auto_generated   ; mux_06c        ; work         ;
+;    |busmux:inst31|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst31                                         ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst31|lpm_mux:$00000                          ; lpm_mux        ; work         ;
+;          |mux_06c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst31|lpm_mux:$00000|mux_06c:auto_generated   ; mux_06c        ; work         ;
+;    |busmux:inst32|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst32                                         ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst32|lpm_mux:$00000                          ; lpm_mux        ; work         ;
+;          |mux_v5c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst32|lpm_mux:$00000|mux_v5c:auto_generated   ; mux_v5c        ; work         ;
+;    |busmux:inst46|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst46                                         ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst46|lpm_mux:$00000                          ; lpm_mux        ; work         ;
+;          |mux_06c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst46|lpm_mux:$00000|mux_06c:auto_generated   ; mux_06c        ; work         ;
+;    |busmux:inst50|                ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst50                                         ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst50|lpm_mux:$00000                          ; lpm_mux        ; work         ;
+;          |mux_j7c:auto_generated| ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst50|lpm_mux:$00000|mux_j7c:auto_generated   ; mux_j7c        ; work         ;
+;    |busmux:inst9999|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst9999                                       ; busmux         ; work         ;
+;       |lpm_mux:$00000|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst9999|lpm_mux:$00000                        ; lpm_mux        ; work         ;
+;          |mux_j7c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|busmux:inst9999|lpm_mux:$00000|mux_j7c:auto_generated ; mux_j7c        ; work         ;
+;    |ccr:inst|                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|ccr:inst                                              ; ccr            ; work         ;
+;    |memoria_inst:inst1|           ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|memoria_inst:inst1                                    ; memoria_inst   ; work         ;
+;    |mux_result:inst20|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|mux_result:inst20                                     ; mux_result     ; work         ;
+;    |mux_src:inst202|              ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|mux_src:inst202                                       ; mux_src        ; work         ;
+;    |reg_acoplo_3:inst16|          ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|reg_acoplo_3:inst16                                   ; reg_acoplo_3   ; work         ;
+;    |reg_acoplo_4:inst107|         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|reg_acoplo_4:inst107                                  ; reg_acoplo_4   ; work         ;
+;    |registro_1:inst100|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst100                                    ; registro_1     ; work         ;
+;    |registro_1:inst101|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst101                                    ; registro_1     ; work         ;
+;    |registro_1:inst102|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst102                                    ; registro_1     ; work         ;
+;    |registro_1:inst103|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst103                                    ; registro_1     ; work         ;
+;    |registro_1:inst104|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst104                                    ; registro_1     ; work         ;
+;    |registro_1:inst105|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst105                                    ; registro_1     ; work         ;
+;    |registro_1:inst106|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_1:inst106                                    ; registro_1     ; work         ;
+;    |registro_inst:inst8|          ; 0 (0)               ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_inst:inst8                                   ; registro_inst  ; work         ;
+;    |registro_pc2:inst34|          ; 5 (5)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc2:inst34                                   ; registro_pc2   ; work         ;
+;    |registro_pc:inst14|           ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc:inst14                                    ; registro_pc    ; work         ;
+;    |registro_pc:inst24|           ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc:inst24                                    ; registro_pc    ; work         ;
+;    |registro_pc:inst700|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registro_pc:inst700                                   ; registro_pc    ; work         ;
+;    |registros:inst700666|         ; 0 (0)               ; 48 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666                                  ; registros      ; work         ;
+;       |registro_esp:ACCA|         ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|registro_esp:ACCA                ; registro_esp   ; work         ;
+;       |registro_esp:ACCB|         ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|registro_esp:ACCB                ; registro_esp   ; work         ;
+;       |registro_esp:AUX|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|registros:inst700666|registro_esp:AUX                 ; registro_esp   ; work         ;
+;    |u_anticipacion:inst2|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|u_anticipacion:inst2                                  ; u_anticipacion ; work         ;
+;    |u_control:inst4|              ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|u_control:inst4                                       ; u_control      ; work         ;
+;    |u_detenciones:inst49|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|u_detenciones:inst49                                  ; u_detenciones  ; work         ;
+;    |upa:inst33|                   ; 75 (75)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|upa:inst33                                            ; upa            ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -537,9 +546,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pipeline|registro_pc:inst700|valor_interno[3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |pipeline|registro_pc:inst14|valor_interno[4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pipeline|registro_pc:inst14|valor_interno[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pipeline|registro_pc:inst700|valor_interno[7] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |pipeline|registro_pc:inst14|valor_interno[0]  ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pipeline|registro_pc:inst14|valor_interno[13] ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |pipeline|upa:inst33|opres[0]                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
@@ -655,6 +664,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst51 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: BUSMUX:inst42 ;
 +----------------+-------+-----------------------------------+
 ; Parameter Name ; Value ; Type                              ;
@@ -680,6 +699,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                              ;
 +----------------+-------+-----------------------------------+
 ; WIDTH          ; 3     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst50 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                    ;
 +----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -784,19 +813,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 78                          ;
 ;     CLR SLD           ; 5                           ;
 ;     ENA CLR           ; 48                          ;
-; cycloneiii_lcell_comb ; 183                         ;
+; cycloneiii_lcell_comb ; 201                         ;
 ;     arith             ; 21                          ;
 ;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 18                          ;
-;     normal            ; 162                         ;
+;     normal            ; 180                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 29                          ;
+;         2 data inputs ; 49                          ;
 ;         3 data inputs ; 38                          ;
-;         4 data inputs ; 92                          ;
+;         4 data inputs ; 90                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.50                        ;
-; Average LUT depth     ; 2.73                        ;
+; Max LUT depth         ; 8.40                        ;
+; Average LUT depth     ; 4.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -815,98 +844,98 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun 02 17:15:57 2022
+    Info: Processing started: Thu Jun 02 21:44:50 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file incrementador.vhdl
-    Info (12022): Found design unit 1: incrementador-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/incrementador.vhdl Line: 11
-    Info (12023): Found entity 1: incrementador File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/incrementador.vhdl Line: 6
+    Info (12022): Found design unit 1: incrementador-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/incrementador.vhdl Line: 11
+    Info (12023): Found entity 1: incrementador File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/incrementador.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mux_pc.vhdl
-    Info (12022): Found design unit 1: mux_pc-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_pc.vhdl Line: 11
-    Info (12023): Found entity 1: mux_pc File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_pc.vhdl Line: 4
+    Info (12022): Found design unit 1: mux_pc-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_pc.vhdl Line: 11
+    Info (12023): Found entity 1: mux_pc File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_pc.vhdl Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registro_pc.vhd
-    Info (12022): Found design unit 1: registro_pc-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_pc.vhd Line: 11
-    Info (12023): Found entity 1: registro_pc File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_pc.vhd Line: 4
+    Info (12022): Found design unit 1: registro_pc-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_pc.vhd Line: 11
+    Info (12023): Found entity 1: registro_pc File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_pc.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_inst.vhd
-    Info (12022): Found design unit 1: memoria_inst-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_inst.vhd Line: 13
-    Info (12023): Found entity 1: memoria_inst File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_inst.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_inst-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_inst.vhd Line: 13
+    Info (12023): Found entity 1: memoria_inst File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_inst.vhd Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline.bdf
     Info (12023): Found entity 1: pipeline
 Info (12021): Found 2 design units, including 1 entities, in source file registro_inst.vhd
-    Info (12022): Found design unit 1: registro_inst-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_inst.vhd Line: 13
-    Info (12023): Found entity 1: registro_inst File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_inst.vhd Line: 4
+    Info (12022): Found design unit 1: registro_inst-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_inst.vhd Line: 13
+    Info (12023): Found entity 1: registro_inst File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_inst.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file etapa1.bdf
     Info (12023): Found entity 1: etapa1
 Info (12021): Found 2 design units, including 1 entities, in source file ext_signo.vhd
-    Info (12022): Found design unit 1: ext_signo-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ext_signo.vhd Line: 9
-    Info (12023): Found entity 1: ext_signo File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ext_signo.vhd Line: 4
+    Info (12022): Found design unit 1: ext_signo-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ext_signo.vhd Line: 9
+    Info (12023): Found entity 1: ext_signo File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ext_signo.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file etapa2.bdf
     Info (12023): Found entity 1: etapa2
 Info (12021): Found 2 design units, including 1 entities, in source file mux_dir.vhd
-    Info (12022): Found design unit 1: mux_dir-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_dir.vhd Line: 12
-    Info (12023): Found entity 1: mux_dir File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_dir.vhd Line: 4
+    Info (12022): Found design unit 1: mux_dir-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_dir.vhd Line: 12
+    Info (12023): Found entity 1: mux_dir File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_dir.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sumador.vhd
-    Info (12022): Found design unit 1: sumador-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/sumador.vhd Line: 14
-    Info (12023): Found entity 1: sumador File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/sumador.vhd Line: 6
+    Info (12022): Found design unit 1: sumador-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/sumador.vhd Line: 14
+    Info (12023): Found entity 1: sumador File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/sumador.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_datos.vhd
-    Info (12022): Found design unit 1: memoria_datos-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_datos.vhd Line: 16
-    Info (12023): Found entity 1: memoria_datos File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_datos.vhd Line: 8
+    Info (12022): Found design unit 1: memoria_datos-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_datos.vhd Line: 16
+    Info (12023): Found entity 1: memoria_datos File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_datos.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file mux_src.vhd
-    Info (12022): Found design unit 1: mux_src-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_src.vhd Line: 15
-    Info (12023): Found entity 1: mux_src File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_src.vhd Line: 4
+    Info (12022): Found design unit 1: mux_src-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_src.vhd Line: 15
+    Info (12023): Found entity 1: mux_src File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_src.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file registros.bdf
     Info (12023): Found entity 1: registros
 Info (12021): Found 2 design units, including 1 entities, in source file mux_regs.vhd
-    Info (12022): Found design unit 1: mux_regs-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_regs.vhd Line: 16
-    Info (12023): Found entity 1: mux_regs File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_regs.vhd Line: 4
+    Info (12022): Found design unit 1: mux_regs-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_regs.vhd Line: 16
+    Info (12023): Found entity 1: mux_regs File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_regs.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file deco_regw.vhd
-    Info (12022): Found design unit 1: deco_regw-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/deco_regw.vhd Line: 14
-    Info (12023): Found entity 1: deco_regw File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/deco_regw.vhd Line: 4
+    Info (12022): Found design unit 1: deco_regw-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/deco_regw.vhd Line: 14
+    Info (12023): Found entity 1: deco_regw File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/deco_regw.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file u_control.vhd
-    Info (12022): Found design unit 1: u_control-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_control.vhd Line: 28
-    Info (12023): Found entity 1: u_control File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_control.vhd Line: 6
+    Info (12022): Found design unit 1: u_control-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_control.vhd Line: 28
+    Info (12023): Found entity 1: u_control File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_control.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file reg_acoplo_3.vhd
-    Info (12022): Found design unit 1: reg_acoplo_3-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 29
-    Info (12023): Found entity 1: reg_acoplo_3 File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 4
+    Info (12022): Found design unit 1: reg_acoplo_3-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 29
+    Info (12023): Found entity 1: reg_acoplo_3 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file upa.vhd
-    Info (12022): Found design unit 1: upa-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 20
-    Info (12023): Found entity 1: upa File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 7
+    Info (12022): Found design unit 1: upa-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 20
+    Info (12023): Found entity 1: upa File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mux_1.vhd
-    Info (12022): Found design unit 1: mux_1-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_1.vhd Line: 11
-    Info (12023): Found entity 1: mux_1 File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_1.vhd Line: 4
+    Info (12022): Found design unit 1: mux_1-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_1.vhd Line: 11
+    Info (12023): Found entity 1: mux_1 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_1.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file etapa3.bdf
     Info (12023): Found entity 1: etapa3
 Info (12021): Found 2 design units, including 1 entities, in source file mux_result.vhd
-    Info (12022): Found design unit 1: mux_result-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_result.vhd Line: 14
-    Info (12023): Found entity 1: mux_result File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_result.vhd Line: 4
+    Info (12022): Found design unit 1: mux_result-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_result.vhd Line: 14
+    Info (12023): Found entity 1: mux_result File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_result.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ccr.vhd
-    Info (12022): Found design unit 1: ccr-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 20
-    Info (12023): Found entity 1: ccr File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 4
+    Info (12022): Found design unit 1: ccr-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 20
+    Info (12023): Found entity 1: ccr File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file branch.vhd
-    Info (12022): Found design unit 1: branch-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/branch.vhd Line: 16
-    Info (12023): Found entity 1: branch File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/branch.vhd Line: 6
+    Info (12022): Found design unit 1: branch-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/branch.vhd Line: 16
+    Info (12023): Found entity 1: branch File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/branch.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registro_1.vhd
-    Info (12022): Found design unit 1: registro_1-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_1.vhd Line: 11
-    Info (12023): Found entity 1: registro_1 File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_1.vhd Line: 4
+    Info (12022): Found design unit 1: registro_1-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_1.vhd Line: 11
+    Info (12023): Found entity 1: registro_1 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_acoplo_4.vhd
-    Info (12022): Found design unit 1: reg_acoplo_4-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_4.vhd Line: 15
-    Info (12023): Found entity 1: reg_acoplo_4 File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_4.vhd Line: 4
+    Info (12022): Found design unit 1: reg_acoplo_4-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_4.vhd Line: 15
+    Info (12023): Found entity 1: reg_acoplo_4 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux_dirw.vhd
-    Info (12022): Found design unit 1: mux_dirw-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_dirw.vhd Line: 10
-    Info (12023): Found entity 1: mux_dirw File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/mux_dirw.vhd Line: 4
+    Info (12022): Found design unit 1: mux_dirw-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_dirw.vhd Line: 10
+    Info (12023): Found entity 1: mux_dirw File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mux_dirw.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registro_esp.vhdl
-    Info (12022): Found design unit 1: registro_esp-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_esp.vhdl Line: 12
-    Info (12023): Found entity 1: registro_esp File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_esp.vhdl Line: 4
+    Info (12022): Found design unit 1: registro_esp-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_esp.vhdl Line: 12
+    Info (12023): Found entity 1: registro_esp File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_esp.vhdl Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registro_pc2.vhd
-    Info (12022): Found design unit 1: registro_pc2-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_pc2.vhd Line: 11
-    Info (12023): Found entity 1: registro_pc2 File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/registro_pc2.vhd Line: 4
+    Info (12022): Found design unit 1: registro_pc2-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_pc2.vhd Line: 11
+    Info (12023): Found entity 1: registro_pc2 File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/registro_pc2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file u_detenciones.vhd
-    Info (12022): Found design unit 1: u_detenciones-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_detenciones.vhd Line: 35
-    Info (12023): Found entity 1: u_detenciones File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_detenciones.vhd Line: 6
+    Info (12022): Found design unit 1: u_detenciones-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_detenciones.vhd Line: 35
+    Info (12023): Found entity 1: u_detenciones File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_detenciones.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file u_anticipacion.vhd
-    Info (12022): Found design unit 1: u_anticipacion-Behavioral File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_anticipacion.vhd Line: 14
-    Info (12023): Found entity 1: u_anticipacion File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/u_anticipacion.vhd Line: 6
+    Info (12022): Found design unit 1: u_anticipacion-Behavioral File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_anticipacion.vhd Line: 14
+    Info (12023): Found entity 1: u_anticipacion File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/u_anticipacion.vhd Line: 6
 Info (12127): Elaborating entity "pipeline" for the top level hierarchy
 Warning (275083): Bus "selregr2[3..0]" found using same base name as "selregr", which might lead to a name conflict.
 Warning (275080): Converted elements in bus name "selregr" using legacy naming rules. Make any assignments on the new names, not on the original names.
@@ -916,37 +945,37 @@ Warning (275080): Converted elements in bus name "selregr2" using legacy naming 
 Warning (275011): Block or symbol "BUSMUX" of instance "inst25" overlaps another block or symbol
 Info (12128): Elaborating entity "registro_1" for hierarchy "registro_1:inst101"
 Info (12128): Elaborating entity "ccr" for hierarchy "ccr:inst"
-Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "ni", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "zi", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "vi", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "ci", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "hi", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "ii", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Info (10041): Inferred latch for "ii" at ccr.vhd(29) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Info (10041): Inferred latch for "hi" at ccr.vhd(29) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Info (10041): Inferred latch for "ci" at ccr.vhd(29) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Info (10041): Inferred latch for "vi" at ccr.vhd(29) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Info (10041): Inferred latch for "zi" at ccr.vhd(29) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-Info (10041): Inferred latch for "ni" at ccr.vhd(29) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "ni", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "zi", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "vi", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "ci", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "hi", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at ccr.vhd(29): inferring latch(es) for signal or variable "ii", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Info (10041): Inferred latch for "ii" at ccr.vhd(29) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Info (10041): Inferred latch for "hi" at ccr.vhd(29) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Info (10041): Inferred latch for "ci" at ccr.vhd(29) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Info (10041): Inferred latch for "vi" at ccr.vhd(29) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Info (10041): Inferred latch for "zi" at ccr.vhd(29) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+Info (10041): Inferred latch for "ni" at ccr.vhd(29) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
 Info (12128): Elaborating entity "upa" for hierarchy "upa:inst33"
-Warning (10631): VHDL Process Statement warning at upa.vhd(23): inferring latch(es) for signal or variable "opres", which holds its previous value in one or more paths through the process File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[0]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[1]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[2]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[3]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[4]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[5]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[6]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[7]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[8]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[9]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[10]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[11]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[12]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[13]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[14]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[15]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-Info (10041): Inferred latch for "opres[16]" at upa.vhd(23) File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
+Warning (10631): VHDL Process Statement warning at upa.vhd(23): inferring latch(es) for signal or variable "opres", which holds its previous value in one or more paths through the process File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[0]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[1]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[2]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[3]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[4]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[5]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[6]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[7]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[8]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[9]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[10]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[11]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[12]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[13]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[14]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[15]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[16]" at upa.vhd(23) File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst40"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst40"
 Info (12133): Instantiated megafunction "BUSMUX:inst40" with the following parameter:
@@ -954,14 +983,14 @@ Info (12133): Instantiated megafunction "BUSMUX:inst40" with the following param
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst40|lpm_mux:$00000" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12131): Elaborated megafunction instantiation "BUSMUX:inst40|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst40" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_t5c.tdf
-    Info (12023): Found entity 1: mux_t5c File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_t5c.tdf Line: 22
+    Info (12023): Found entity 1: mux_t5c File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_t5c.tdf Line: 22
 Info (12128): Elaborating entity "mux_t5c" for hierarchy "BUSMUX:inst40|lpm_mux:$00000|mux_t5c:auto_generated" File: d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
 Info (12128): Elaborating entity "reg_acoplo_3" for hierarchy "reg_acoplo_3:inst16"
 Info (12128): Elaborating entity "u_detenciones" for hierarchy "u_detenciones:inst49"
 Info (12128): Elaborating entity "u_control" for hierarchy "u_control:inst4"
 Info (12128): Elaborating entity "registro_inst" for hierarchy "registro_inst:inst8"
 Info (12128): Elaborating entity "memoria_inst" for hierarchy "memoria_inst:inst1"
-Warning (10541): VHDL Signal Declaration warning at memoria_inst.vhd(16): used implicit default value for signal "mem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_inst.vhd Line: 16
+Warning (10541): VHDL Signal Declaration warning at memoria_inst.vhd(16): used implicit default value for signal "mem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_inst.vhd Line: 16
 Info (12128): Elaborating entity "registro_pc2" for hierarchy "registro_pc2:inst34"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst9999"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst9999"
@@ -970,7 +999,7 @@ Info (12133): Instantiated megafunction "BUSMUX:inst9999" with the following par
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst9999|lpm_mux:$00000" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12131): Elaborated megafunction instantiation "BUSMUX:inst9999|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst9999" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_j7c.tdf
-    Info (12023): Found entity 1: mux_j7c File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_j7c.tdf Line: 22
+    Info (12023): Found entity 1: mux_j7c File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_j7c.tdf Line: 22
 Info (12128): Elaborating entity "mux_j7c" for hierarchy "BUSMUX:inst9999|lpm_mux:$00000|mux_j7c:auto_generated" File: d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
 Info (12128): Elaborating entity "branch" for hierarchy "branch:inst22"
 Info (12128): Elaborating entity "incrementador" for hierarchy "incrementador:inst7"
@@ -989,7 +1018,7 @@ Info (12133): Instantiated megafunction "BUSMUX:inst46" with the following param
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst46|lpm_mux:$00000" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12131): Elaborated megafunction instantiation "BUSMUX:inst46|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst46" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_06c.tdf
-    Info (12023): Found entity 1: mux_06c File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_06c.tdf Line: 22
+    Info (12023): Found entity 1: mux_06c File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_06c.tdf Line: 22
 Info (12128): Elaborating entity "mux_06c" for hierarchy "BUSMUX:inst46|lpm_mux:$00000|mux_06c:auto_generated" File: d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
 Info (12128): Elaborating entity "reg_acoplo_4" for hierarchy "reg_acoplo_4:inst107"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst39"
@@ -1004,8 +1033,9 @@ Info (12133): Instantiated megafunction "BUSMUX:inst36" with the following param
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst36|lpm_mux:$00000" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12131): Elaborated megafunction instantiation "BUSMUX:inst36|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst36" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_u5c.tdf
-    Info (12023): Found entity 1: mux_u5c File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_u5c.tdf Line: 22
+    Info (12023): Found entity 1: mux_u5c File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_u5c.tdf Line: 22
 Info (12128): Elaborating entity "mux_u5c" for hierarchy "BUSMUX:inst36|lpm_mux:$00000|mux_u5c:auto_generated" File: d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "u_anticipacion" for hierarchy "u_anticipacion:inst2"
 Info (12128): Elaborating entity "mux_src" for hierarchy "mux_src:inst202"
 Info (12128): Elaborating entity "memoria_datos" for hierarchy "memoria_datos:inst41"
 Info (12128): Elaborating entity "ext_signo" for hierarchy "ext_signo:inst18"
@@ -1016,48 +1046,48 @@ Info (12133): Instantiated megafunction "BUSMUX:inst32" with the following param
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst32|lpm_mux:$00000" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12131): Elaborated megafunction instantiation "BUSMUX:inst32|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst32" File: d:/quartus2/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_v5c.tdf
-    Info (12023): Found entity 1: mux_v5c File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/db/mux_v5c.tdf Line: 22
+    Info (12023): Found entity 1: mux_v5c File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/db/mux_v5c.tdf Line: 22
 Info (12128): Elaborating entity "mux_v5c" for hierarchy "BUSMUX:inst32|lpm_mux:$00000|mux_v5c:auto_generated" File: d:/quartus2/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Critical Warning (127005): Memory depth (64) in the design file differs from memory depth (50) in the Memory Initialization File "C:/Users/alons/Downloads/Practica8 (1)/Practica8/mem_prog.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (64) in the design file differs from memory depth (50) in the Memory Initialization File "C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/mem_prog.mif" -- setting initial value for remaining addresses to 0
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276013): RAM logic "memoria_inst:inst1|mem" is uninferred because MIF is not supported for the selected family File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/memoria_inst.vhd Line: 16
-Warning (13012): Latch ccr:inst|vi has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/ccr.vhd Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[15] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[1] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[2] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[3] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[4] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[5] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[6] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[7] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[8] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[9] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[10] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[11] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[12] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[13] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[14] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[0] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Warning (13012): Latch upa:inst33|opres[16] has unsafe behavior File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/upa.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
-Info (13000): Registers with preset signals will power-up high File: C:/Users/alons/Downloads/Practica8 (1)/Practica8/reg_acoplo_3.vhd Line: 46
+    Info (276013): RAM logic "memoria_inst:inst1|mem" is uninferred because MIF is not supported for the selected family File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/memoria_inst.vhd Line: 16
+Warning (13012): Latch ccr:inst|vi has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/ccr.vhd Line: 29
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[15] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[1] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[2] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[3] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[4] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[5] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[6] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[7] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[8] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[9] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[10] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[11] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[12] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[13] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[14] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[0] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selfalgs[1] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch upa:inst33|opres[16] has unsafe behavior File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_acoplo_3:inst16|selop[2] File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
+Info (13000): Registers with preset signals will power-up high File: C:/Users/alons/Documents/Escuela/Lab. Computo/Repositorio/ProyectoArqui/RISC2/reg_acoplo_3.vhd Line: 46
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "IX_D[15]" is stuck at GND
@@ -1112,14 +1142,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 58 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 348 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 366 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 102 output pins
-    Info (21061): Implemented 244 logic cells
+    Info (21061): Implemented 262 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Thu Jun 02 17:16:07 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Thu Jun 02 21:45:01 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
