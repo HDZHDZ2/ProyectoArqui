@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/sayun/Documents/AYOC/Nueva carpeta/RISC/simulation/qsim
+Ehard_block
+Z0 w1654289270
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+Z7 dC:/Users/alons/Pictures/RISC2/RISC2/simulation/qsim
+Z8 8pipeline.vho
+Z9 Fpipeline.vho
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1654289271
+!i10b 1
+Z12 !s108 1654289271.000000
+Z13 !s90 -work|work|pipeline.vho|
+Z14 !s107 pipeline.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Epipeline
+R0
+R2
+R6
+R1
+Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R3
+R4
+R5
+Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R7
+R8
+R9
+l0
+L90
+VIe<VBU?KQFYY7hNU1>L_o2
+!s100 ]lcHOh3TNNm6VeSf9>`bm0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R6
+R1
+R17
+R3
+R4
+R5
+R18
+DEx4 work 8 pipeline 0 22 Ie<VBU?KQFYY7hNU1>L_o2
+l763
+L216
+VkdfhW4O@PL_a3`>TnikGJ0
+!s100 :7:`2cBoSkASnC[Z]O;LK2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Epipeline_vhd_vec_tst
+Z19 w1654289269
+R4
+R5
+R7
+Z20 8Waveform4.vwf.vht
+Z21 FWaveform4.vwf.vht
+l0
+L31
+VSTK3gZMeSglNJUoMVd>C[2
+!s100 fmO5L=c`C]W=QV;``?4DS3
+R10
+32
+R11
+!i10b 1
+R12
+Z22 !s90 -work|work|Waveform4.vwf.vht|
+Z23 !s107 Waveform4.vwf.vht|
+!i113 1
+R15
+R16
+Apipeline_arch
+R4
+R5
+Z24 DEx4 work 20 pipeline_vhd_vec_tst 0 22 STK3gZMeSglNJUoMVd>C[2
+l68
+L33
+Z25 V1?oFebYW5f@VGhTGKjZTL2
+Z26 !s100 c02bng1528RC]P7F_7a^F0
+R10
+32
+R11
+!i10b 1
+R12
+R22
+R23
+!i113 1
+R15
+R16
